@@ -1,0 +1,17 @@
+# ignore contents of all private folders
+private*/*
+
+# ignore all assignment solutions
+solution_*
+report_*
+
+# ignore videos
+*.mp4
+*.wav
+
+# ignore data filess
+*.dat
+*.bin
+
+# ignore zips
+*.zip

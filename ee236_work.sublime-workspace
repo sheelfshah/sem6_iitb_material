@@ -1,0 +1,662 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"la",
+				"last_delivery_ids"
+			],
+			[
+				"customer_del",
+				"customer_delivery_table"
+			],
+			[
+				"del",
+				"delivered_at"
+			],
+			[
+				"sel",
+				"select"
+			],
+			[
+				"d",
+				"darkstore_id"
+			],
+			[
+				"fir",
+				"first_name"
+			],
+			[
+				"dark",
+				"darkstore_id"
+			],
+			[
+				"mob",
+				"mobile_number"
+			],
+			[
+				"las",
+				"last_name"
+			],
+			[
+				"ad",
+				"admin_params"
+			],
+			[
+				"as",
+				"as_json"
+			],
+			[
+				"a",
+				"a_params"
+			],
+			[
+				"re",
+				"rescue"
+			],
+			[
+				"E",
+				"Exception"
+			],
+			[
+				"customer_d",
+				"customer_deliveries_hash"
+			],
+			[
+				"dar",
+				"darkstore_id"
+			],
+			[
+				"delivere",
+				"delivered_at"
+			],
+			[
+				"deli",
+				"deliveries"
+			],
+			[
+				"cu",
+				"customer"
+			],
+			[
+				"all",
+				"all_customers"
+			],
+			[
+				"customer",
+				"customer_id"
+			],
+			[
+				"r",
+				"request"
+			],
+			[
+				"admin",
+				"admin_id"
+			],
+			[
+				"eve",
+				"event_log_params"
+			],
+			[
+				"par",
+				"params"
+			],
+			[
+				"procure",
+				"procurement_unit"
+			],
+			[
+				"in",
+				"inventory_qty"
+			],
+			[
+				"ta",
+				"tax_amt_sum"
+			],
+			[
+				"th",
+				"th"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"bo",
+				"border-bottom"
+			],
+			[
+				"erb",
+				"erb2"
+			],
+			[
+				"n",
+				"nett_amount"
+			],
+			[
+				"tot_",
+				"tot_amt"
+			],
+			[
+				"gs",
+				"gst_breakup"
+			],
+			[
+				"l",
+				"line_item_in_categories"
+			],
+			[
+				"pr",
+				"product"
+			],
+			[
+				"te",
+				"text-center"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"po",
+				"pos_invoice_as_html"
+			],
+			[
+				"de",
+				"def"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/User/ngspice_cir_build.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Ruby/Ruby.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Chrome.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Edge.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Ruby/Ruby.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/Chrome.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Edge.sublime-build",
+					""
+				],
+				[
+					"Packages/User/ngspice_cir_build.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/ngspice_cir_build.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"snipp",
+				"Snippet: Starter circuit template"
+			],
+			[
+				"ter",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"res",
+				"Origami: Restore Saved Layout"
+			],
+			[
+				"rest",
+				"Origami: Restore Saved Layout"
+			],
+			[
+				"re",
+				"Origami: Restore Saved Layout"
+			],
+			[
+				"setup",
+				"ST: Setup Connections"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"t",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"termin",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"resto",
+				"Origami: Restore Saved Layout"
+			],
+			[
+				"sidebar",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"l",
+				"Package Control: List Packages"
+			],
+			[
+				"lis",
+				"Package Control: List Packages"
+			],
+			[
+				"pack",
+				"Install Package Control"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/home/sfshah/.config/sublime-text/Packages/User/ngspice_cir_template.sublime-snippet",
+		"/home/sfshah/.config/sublime-text/Packages/User/cir_files_ngspice.sublime-syntax",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/app/models/delivery.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/app/jobs/update_sku_active_job.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/app/jobs/update_sku_price_job.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/app/models/admin.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/app/jobs/create_admin_in_activity_logging_job.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/app/models/customer.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-activity-logging/app/controllers/admin_controller.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/app/jobs/algolia/algolia_product_update_job.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/app/jobs/activity_log_job.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-activity-logging/config/database.yml",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/log/sidekiq.log",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/app/controllers/admin_dashboard/api/v1/admin/activity_logging_controller.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/app/controllers/admin_dashboard/api/v1/admin/authorization_controller.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-activity-logging/app/controllers/event_log_controller.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/config/routes.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/app/controllers/application_controller.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/config/environment.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-activity-logging/config/environment.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-api/config/schedule.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/app/controllers/activity_logging_controller.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-activity-logging/config/routes.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-api/app/services/customer_service/customer_tagging_service.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-api/Gemfile",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/config/schedule.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/Gemfile",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-activity-logging/Gemfile",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/app/controllers/admin_dashboard/api/v1/products/products_controller.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/config/schedule.yml",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/app/models/delivery_line_item.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/config/initializers/global.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/Gemfile.lock",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-activity-logging/Gemfile.lock",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/config/database.yml",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-api/db/schema.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-activity-logging/app/models/admin.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-api/config/database.yml",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/app/services/customer_service/customer_tagging_service.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/app/jobs/customer_tagging_job.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-activity-logging/db/schema.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-activity-logging/app/views/layouts/mailer.html.erb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-activity-logging/db/migrate/20211228133524_make_admin_mobile_unique.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-activity-logging/app/models/event.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-activity-logging/app/models/event_log.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-activity-logging/app/controllers/event_controller.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-activity-logging/db/migrate/20211228102054_create_events.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-activity-logging/db/migrate/20211228114657_make_event_name_unique.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-activity-logging/db/migrate/20211228103508_create_admins.rb",
+		"/home/sfshah/Downloads/schema.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/app/views/invoices/receipt_invoice.erb",
+		"/tmp/random/test_pos.html",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/app/models/order.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/app/jobs/invoice_job.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/app/views/invoices/invoice_delivery_pdf.erb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/app/views/layouts/invoice_pdf.erb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/config/initializers/application.yml",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/app/controllers/store_dashboard/api/v1/store/darkstores_controller.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/config/initializers/sidekiq.rb",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/config/sidekiq.yml",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/app/views/invoices/receipt_invoice_temp.html",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/app/views/invoices/receipt_invoice_temp2.html",
+		"/home/sfshah/Desktop/fraazo_dec_21/fraazo-store-api/db/schema.rb",
+		"/home/sfshah/.config/sublime-text/Packages/User/erb2.sublime-snippet",
+		"/home/sfshah/.config/sublime-text/Packages/User/erb1.sublime-snippet"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 110.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 42.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SQLTools Result":
+	{
+		"height": 144.0
+	},
+	"output.Terminus Build Results":
+	{
+		"height": 144.0
+	},
+	"output.exec":
+	{
+		"height": 144.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "ee236_work.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"delivery",
+				"fraazo-store-api/app/models/delivery.rb"
+			],
+			[
+				"c",
+				"fraazo-store-api/app/models/customer.rb"
+			],
+			[
+				"customer.r",
+				"fraazo-store-api/app/models/customer.rb"
+			],
+			[
+				"admin_co",
+				"fraazo-activity-logging/app/controllers/admin_controller.rb"
+			],
+			[
+				"price",
+				"fraazo-store-api/app/jobs/update_sku_price_job.rb"
+			],
+			[
+				"schedu",
+				"fraazo-api/config/schedule.rb"
+			],
+			[
+				"activityl",
+				"fraazo-store-api/app/jobs/activity_log_job.rb"
+			],
+			[
+				"activi",
+				"fraazo-store-api/app/jobs/activity_log_job.rb"
+			],
+			[
+				"routes",
+				"fraazo-activity-logging/config/routes.rb"
+			],
+			[
+				"gem",
+				"fraazo-store-api/Gemfile"
+			],
+			[
+				"gemfi",
+				"fraazo-activity-logging/Gemfile"
+			],
+			[
+				"prcon",
+				"fraazo-store-api/app/controllers/admin_dashboard/api/v1/products/products_controller.rb"
+			],
+			[
+				"custagser",
+				"fraazo-api/app/services/customer_service/customer_tagging_service.rb"
+			],
+			[
+				"customer_tagg",
+				"fraazo-api/app/services/customer_service/customer_tagging_service.rb"
+			],
+			[
+				"schem",
+				"fraazo-store-api/db/schema.rb"
+			],
+			[
+				"glo",
+				"fraazo-store-api/config/initializers/global.rb"
+			],
+			[
+				"ge",
+				"fraazo-store-api/Gemfile"
+			],
+			[
+				"customerservi",
+				"fraazo-store-api/app/services/customer_service/customer_tagging_service.rb"
+			],
+			[
+				"cust",
+				"fraazo-store-api/app/jobs/customer_tagging_job.rb"
+			],
+			[
+				"sche",
+				"fraazo-store-api/config/schedule.rb"
+			],
+			[
+				"schedule.yml",
+				"fraazo-store-api/config/schedule.yml"
+			],
+			[
+				"customer_tagging_se",
+				"fraazo-api/app/services/customer_service/customer_tagging_service.rb"
+			],
+			[
+				"customerta",
+				"fraazo-store-api/app/jobs/customer_tagging_job.rb"
+			],
+			[
+				"job c",
+				"fraazo-store-api/app/jobs/customer_tagging_job.rb"
+			],
+			[
+				"eventl",
+				"app/models/event_log.rb"
+			],
+			[
+				"eve",
+				"app/models/event.rb"
+			],
+			[
+				"ad",
+				"app/models/admin.rb"
+			],
+			[
+				"ord",
+				"fraazo-api/app/models/order.rb"
+			],
+			[
+				"producon",
+				"app/controllers/admin_dashboard/api/v1/products/products_controller.rb"
+			],
+			[
+				"line",
+				"app/models/delivery_line_item.rb"
+			],
+			[
+				"admin",
+				"app/models/admin.rb"
+			],
+			[
+				"invoi",
+				"app/jobs/invoice_job.rb"
+			],
+			[
+				"order",
+				"app/models/order.rb"
+			],
+			[
+				"deli",
+				"app/models/delivery.rb"
+			],
+			[
+				"sidek",
+				"config/initializers/sidekiq.rb"
+			],
+			[
+				"oredr",
+				"app/models/order.rb"
+			],
+			[
+				"receipt ht",
+				"app/views/invoices/receipt_invoice.html.erb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Desktop/fraazo_dec_21/fraazo_work.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 413.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
