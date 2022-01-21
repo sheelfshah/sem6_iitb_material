@@ -176,130 +176,124 @@
 	"buffers":
 	[
 		{
-			"file": "ee236_electronic_devices_lab/solution_lab2/schottky_iv.cir",
+			"file": "ee236_electronic_devices_lab/solution_lab2/zener_iv/zener_iv.cir",
 			"settings":
 			{
-				"buffer_size": 618,
-				"encoding": "UTF-8",
+				"buffer_size": 257,
 				"line_ending": "Unix"
 			},
 			"undo_stack":
 			[
-				[
-					5,
-					2,
-					"left_delete",
-					null,
-					"AgAAAO4BAAAAAAAA7gEAAAAAAAABAAAAN+0BAAAAAAAA7QEAAAAAAAABAAAALQ",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAADvAQAAAAAAAO8BAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					6,
-					1,
-					"insert",
-					{
-						"characters": "0"
-					},
-					"AQAAAO0BAAAAAAAA7gEAAAAAAAAAAAAA",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAADtAQAAAAAAAO0BAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					9,
-					1,
-					"left_delete",
-					null,
-					"AQAAAO8BAAAAAAAA7wEAAAAAAAABAAAAOA",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAADwAQAAAAAAAPABAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					10,
-					1,
-					"insert",
-					{
-						"characters": "2"
-					},
-					"AQAAAO8BAAAAAAAA8AEAAAAAAAAAAAAA",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAADvAQAAAAAAAO8BAAAAAAAAAAAAAAAA8L8"
-				]
 			]
 		},
 		{
-			"file": "ee236_electronic_devices_lab/solution_lab2/schottky_rr.cir",
+			"contents": "sfshah@sfshah-HP-Laptop-15-di2xxx-ubuntu:~/Desktop/sem6_iitb_material$ xcircuit\nsfshah@sfshah-HP-Laptop-15-di2xxx-ubuntu:~/Desktop/sem6_iitb_material$ ​‌​\nem6_iitb_material$ c\nd ee236_electronic_devices_lab/solution_lab2        \nsfshah@sfshah-HP-Laptop-15-di2xxx-ubuntu:~/Desktop/s​‌​\nem6_iitb_material/ee236_electronic_devices_lab/solut\nion_lab2$ ls\n design1\n design2.cir\n design2_plot.png\n doubler.cir\n doubler_plot.png\n EE236_Lab2.pdf\n models\n rectifier.cir\n regulator.cir\n regulator_plot.png\n schottky_iv.cir\n schottky_iv_plot.png\n schottky_rr.cir\n schottky_rr_plot1.png\n schottky_rr_plot2.png\n solution_lab2.zip\n'Supporting Document for Schottky Diode.pdf'\n'Supporting Document for Zener Diode.pdf'\n zener_iv.cir\n zener_iv_plot.png\nsfshah@sfshah-HP-Laptop-15-di2xxx-ubuntu:~/Desktop/s\nem6_iitb_material/ee236_electronic_devices_lab/solut\nion_lab2$ cd ee236_electronic_devices_lab/solution_l\nab2\nbash: cd: ee236_electronic_devices_lab/solution_lab2\n: No such file or directory\nsfshah@sfshah-HP-Laptop-15-di2xxx-ubuntu:~/Desktop/s\nem6_iitb_material/ee236_electronic_devices_lab/solut\nion_lab2$ cd ee236_electronic_devices_lab/solution_l\nab2                                                 \nbash: cd: ee236_electronic_devices_lab/solution_lab2\n: No such file or directory\nsfshah@sfshah-HP-Laptop-15-di2xxx-ubuntu:~/Desktop/s\nem6_iitb_material/ee236_electronic_devices_lab/solut\nion_lab2$ xcircuit                                  \nsfshah@sfshah-HP-Laptop-15-di2xxx-ubuntu:~/Desktop/s​‌​\nktop/stb_material/ee236_electronic_devices_lab/solut\nem6_iitb_material/ee236_electronic_devices_lab                                                                ​‌​\n/solut\nion_lab2$ xcircuit\nsfshah@sfshah-HP-Laptop-15-di2xxx-ubuntu:~/Des​‌​\nktop/sem6_iitb_material/ee236_electronic_devic​‌​\nes_lab/solution_lab2$ xcircuit                \nsfshah@sfshah-HP-Laptop-15-di2xxx-ubuntu:~/Des​‌​\nktop/sem6_iitb_material/ee236_electronic_devic​‌​\nes_lab/solution_lab2$ xcircuit\nsfshah@sfshah-HP-Laptop-15-di2xxx-ubuntu:~/Des​‌​\nktop/sem6_iitb_material/ee236_electronic_devic​‌​\nes_lab/solution_lab2$ xcircuit\nsfshah@sfshah-HP-Laptop-15-di2xxx-ubuntu:~/Des​‌​\nktop/sem6_iitb_material/ee236_electronic_devic​‌​\nes_lab/solution_lab2$ xcircuit\nsfshah@sfshah-HP-Laptop-15-di2xxx-ubuntu:~/Des​‌​\nktop/sem6_iitb_material/ee236_electronic_devic​‌​\nes_lab/solution_lab2$ git add -A\nsfshah@sfshah-HP-Laptop-15-di2xxx-ubuntu:~/Des​‌​\nktop/sem6_iitb_material/ee236_electronic_devic​‌​\nes_lab/solution_lab2$ git status\nOn branch master\nYour branch is up to date with 'origin/master'​‌​\n.\n\nChanges to be committed:\n  (use \"git restore --staged <file>...\" to uns​‌​\ntage)\n        modified:   ../plots/lab0_ex2_1.ps\n        modified:   ../plots/lab0_ex2_2.ps\n        modified:   ../../ee236_work.sublime-w​‌​\norkspace\n\nsfshah@sfshah-HP-Laptop-15-di2xxx-ubuntu:~/Des​‌​\nktop/sem6_iitb_material/ee236_electronic_devic​‌​\nes_lab/solution_lab2$ git commit -m minor     \n[master 3e70e84] minor\n 3 files changed, 17814 insertions(+), 19299 d​‌​\neletions(-)\n rewrite ee236_electronic_devices_lab/plots/la​‌​\nb0_ex2_2.ps (96%)\n rewrite ee236_work.sublime-workspace (71%)\nsfshah@sfshah-HP-Laptop-15-di2xxx-ubuntu:~/Des​‌​\nktop/sem6_iitb_material/ee236_electronic_devic​‌​\nes_lab/solution_lab2$ git commit -m minor2\nOn branch master\nYour branch is ahead of 'origin/master' by 1 c​‌​\nommit.\n  (use \"git push\" to publish your local commit​‌​\ns)\n\nnothing to commit, working tree clean\nsfshah@sfshah-HP-Laptop-15-di2xxx-ubuntu:~/Des​‌​\nktop/sem6_iitb_material/ee236_electronic_devic​‌​\nes_lab/solution_lab2$ git log\ncommit 3e70e84ee13aa1bbf382c2c0552c9e244a4e532​‌​\n7 (HEAD -> master)\nAuthor: SFShah <sheel.shah@fraazo.com>\nDate:   Wed Jan 19 20:34:26 2022 +0530\n\n    minor\n\ncommit 80cf721c0efc0347023fc91b65136e37f226268​‌​\nc (origin/master)\nsfshah@sfshah-HP-Laptop-15-di2xxx-ubuntu:~/Des​‌​\nktop/sem6_iitb_material/ee236_electronic_devic​‌​\nes_lab/solution_lab2$ ",
 			"settings":
 			{
-				"buffer_size": 264,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"buffer_size": 3917,
+				"line_ending": "Unix",
+				"name": "Login Shell",
+				"scratch": true
 			},
 			"undo_stack":
 			[
 				[
-					11,
+					250,
 					1,
-					"left_delete",
+					"terminus_render",
 					null,
-					"AQAAALAAAAAAAAAAsAAAAAAAAAABAAAAKg",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAACxAAAAAAAAALEAAAAAAAAAAAAAAAAA8L8"
+					"AQAAAJ0MAAAAAAAAxgwAAAAAAAAWAAAAZXNfbGFiL3NvbHV0aW9uX2xhYjIkIA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAACzDAAAAAAAALMMAAAAAAAAAAAAAAAA8L8"
 				],
 				[
-					13,
+					252,
 					1,
-					"insert",
-					{
-						"characters": "*"
-					},
-					"AQAAAJoAAAAAAAAAmwAAAAAAAAAAAAAA",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAACaAAAAAAAAAJoAAAAAAAAAAAAAAAAAAAA"
+					"terminus_render",
+					null,
+					"AQAAAJ0MAAAAAAAAxwwAAAAAAAApAAAAZXNfbGFiL3NvbHV0aW9uX2xhYjIkIGdpdCBjb21taXQgLW0gbWlub3I",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAADGDAAAAAAAAMYMAAAAAAAAAAAAAAAA8L8"
 				],
 				[
-					14,
-					1,
-					"insert",
-					{
-						"characters": " "
-					},
-					"AQAAAJsAAAAAAAAAnAAAAAAAAAAAAAAA",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAACbAAAAAAAAAJsAAAAAAAAAAAAAAAAA8L8"
-				]
-			]
-		},
-		{
-			"file": "ee236_electronic_devices_lab/solution_lab2/regulator.cir",
-			"settings":
-			{
-				"buffer_size": 460,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			},
-			"undo_stack":
-			[
-				[
+					254,
 					3,
-					2,
-					"left_delete",
+					"terminus_render",
 					null,
-					"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"
+					"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"
 				],
 				[
-					4,
+					256,
 					1,
-					"insert",
-					{
-						"characters": "52"
-					},
-					"AgAAACYBAAAAAAAAJwEAAAAAAAAAAAAAJwEAAAAAAAAoAQAAAAAAAAAAAAA",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAmAQAAAAAAACYBAAAAAAAAAAAAAAAA8L8"
+					"terminus_render",
+					null,
+					"AQAAANINAAAAAAAA6Q0AAAAAAAAWAAAAZXNfbGFiL3NvbHV0aW9uX2xhYjIkIA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAADoDQAAAAAAAOgNAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					258,
+					1,
+					"terminus_render",
+					null,
+					"AQAAANINAAAAAAAA6g0AAAAAAAAXAAAAZXNfbGFiL3NvbHV0aW9uX2xhYjIkIGc",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAADpDQAAAAAAAOkNAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					260,
+					1,
+					"terminus_render",
+					null,
+					"AQAAANINAAAAAAAA6w0AAAAAAAAYAAAAZXNfbGFiL3NvbHV0aW9uX2xhYjIkIGdp",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAADqDQAAAAAAAOoNAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					262,
+					1,
+					"terminus_render",
+					null,
+					"AgAAANINAAAAAAAA6w0AAAAAAAAZAAAAZXNfbGFiL3NvbHV0aW9uX2xhYjIkIGdpdOsNAAAAAAAA7A0AAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAADrDQAAAAAAAOsNAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					264,
+					1,
+					"terminus_render",
+					null,
+					"AQAAANINAAAAAAAA7Q0AAAAAAAAaAAAAZXNfbGFiL3NvbHV0aW9uX2xhYjIkIGdpdCA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAADsDQAAAAAAAOwNAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					266,
+					1,
+					"terminus_render",
+					null,
+					"AQAAANINAAAAAAAA7g0AAAAAAAAbAAAAZXNfbGFiL3NvbHV0aW9uX2xhYjIkIGdpdCBs",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAADtDQAAAAAAAO0NAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					268,
+					1,
+					"terminus_render",
+					null,
+					"AQAAANINAAAAAAAA7w0AAAAAAAAcAAAAZXNfbGFiL3NvbHV0aW9uX2xhYjIkIGdpdCBsbw",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAADuDQAAAAAAAO4NAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					270,
+					1,
+					"terminus_render",
+					null,
+					"IAAAANINAAAAAAAA7w0AAAAAAAAdAAAAZXNfbGFiL3NvbHV0aW9uX2xhYjIkIGdpdCBsb2egDQAAAAAAANENAAAAAAAANwAAAGt0b3Avc2VtNl9paXRiX21hdGVyaWFsL2VlMjM2X2VsZWN0cm9uaWNfZGV2aWPigIvigIzigItuDQAAAAAAAJ8NAAAAAAAANwAAAHNmc2hhaEBzZnNoYWgtSFAtTGFwdG9wLTE1LWRpMnh4eC11YnVudHU6fi9EZXPigIvigIzigItIDQAAAAAAAG0NAAAAAAAAJQAAAG5vdGhpbmcgdG8gY29tbWl0LCB3b3JraW5nIHRyZWUgY2xlYW5HDQAAAAAAAEcNAAAAAAAAAAAAAEQNAAAAAAAARg0AAAAAAAACAAAAcykSDQAAAAAAAEMNAAAAAAAANwAAACAgKHVzZSAiZ2l0IHB1c2giIHRvIHB1Ymxpc2ggeW91ciBsb2NhbCBjb21taXTigIvigIzigIsLDQAAAAAAABENAAAAAAAABgAAAG9tbWl0LtkMAAAAAAAACg0AAAAAAAA3AAAAWW91ciBicmFuY2ggaXMgYWhlYWQgb2YgJ29yaWdpbi9tYXN0ZXInIGJ5IDEgY+KAi+KAjOKAi8gMAAAAAAAA2AwAAAAAAAAQAAAAT24gYnJhbmNoIG1hc3Rlcu8NAAAAAAAA8A0AAAAAAAAAAAAA8A0AAAAAAAAhDgAAAAAAAAAAAAAhDgAAAAAAACIOAAAAAAAAAAAAACIOAAAAAAAANA4AAAAAAAAAAAAANA4AAAAAAAA1DgAAAAAAAAAAAAA1DgAAAAAAAFsOAAAAAAAAAAAAAFsOAAAAAAAAXA4AAAAAAAAAAAAAXA4AAAAAAACCDgAAAAAAAAAAAACCDgAAAAAAAIMOAAAAAAAAAAAAAIMOAAAAAAAAgw4AAAAAAAAAAAAAgw4AAAAAAACEDgAAAAAAAAAAAACEDgAAAAAAAI0OAAAAAAAAAAAAAI0OAAAAAAAAjg4AAAAAAAAAAAAAjg4AAAAAAACODgAAAAAAAAAAAACODgAAAAAAAI8OAAAAAAAAAAAAAI8OAAAAAAAAwA4AAAAAAAAAAAAAwA4AAAAAAADBDgAAAAAAAAAAAADBDgAAAAAAANIOAAAAAAAAAAAAANIOAAAAAAAA0w4AAAAAAAAAAAAA0w4AAAAAAADUDgAAAAAAAAAAAADUDgAAAAAAAAEPAAAAAAAAAAAAANQOAAAAAAAA1A4AAAAAAAAtAAAAICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAADvDQAAAAAAAO8NAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					272,
+					1,
+					"terminus_render",
+					null,
+					"DwAAACIOAAAAAAAANA4AAAAAAAASAAAANyAoSEVBRCAtPiBtYXN0ZXIp8A0AAAAAAAAhDgAAAAAAADcAAABjb21taXQgM2U3MGU4NGVlMTNhYTFiYmYzODJjMmMwNTUyYzllMjQ0YTRlNTMy4oCL4oCM4oCLNQ4AAAAAAABbDgAAAAAAACYAAABBdXRob3I6IFNGU2hhaCA8c2hlZWwuc2hhaEBmcmFhem8uY29tPlwOAAAAAAAAgg4AAAAAAAAmAAAARGF0ZTogICBXZWQgSmFuIDE5IDIwOjM0OjI2IDIwMjIgKzA1MzCDDgAAAAAAAIMOAAAAAAAAAAAAAIQOAAAAAAAAjQ4AAAAAAAAJAAAAICAgIG1pbm9yjg4AAAAAAACODgAAAAAAAAAAAACPDgAAAAAAAMAOAAAAAAAANwAAAGNvbW1pdCA4MGNmNzIxYzBlZmMwMzQ3MDIzZmM5MWI2NTEzNmUzN2YyMjYyNjjigIvigIzigIvBDgAAAAAAANIOAAAAAAAAEQAAAGMgKG9yaWdpbi9tYXN0ZXIp0w4AAAAAAAAEDwAAAAAAAAEAAAA6BA8AAAAAAAAFDwAAAAAAAAAAAAAFDwAAAAAAADYPAAAAAAAAAAAAADYPAAAAAAAANw8AAAAAAAAAAAAANw8AAAAAAABMDwAAAAAAAAAAAABMDwAAAAAAAE0PAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAADUDgAAAAAAANQOAAAAAAAAAAAAAAAA8L8"
 				]
 			]
-		},
-		{
-			"file": "ee236_electronic_devices_lab/solution_lab2/doubler.cir",
-			"settings":
-			{
-				"buffer_size": 163,
-				"line_ending": "Unix"
-			}
 		}
 	],
 	"build_system": "Packages/User/ngspice_cir_build.sublime-build",
@@ -354,6 +348,10 @@
 		"selected_items":
 		[
 			[
+				"re",
+				"Origami: Restore Saved Layout"
+			],
+			[
 				"ter",
 				"Terminus: Open Default Shell in Tab (View)"
 			],
@@ -367,10 +365,6 @@
 			],
 			[
 				"res",
-				"Origami: Restore Saved Layout"
-			],
-			[
-				"re",
 				"Origami: Restore Saved Layout"
 			],
 			[
@@ -433,19 +427,23 @@
 		"/home/sfshah/Desktop/sem6_iitb_material",
 		"/home/sfshah/Desktop/sem6_iitb_material/ee236_electronic_devices_lab",
 		"/home/sfshah/Desktop/sem6_iitb_material/ee236_electronic_devices_lab/solution_lab2",
-		"/home/sfshah/Desktop/sem6_iitb_material/ee236_electronic_devices_lab/solution_lab2/models"
+		"/home/sfshah/Desktop/sem6_iitb_material/ee236_electronic_devices_lab/solution_lab2/schottky_iv"
 	],
 	"file_history":
 	[
+		"/home/sfshah/Desktop/sem6_iitb_material/ee236_electronic_devices_lab/solution_lab2/models/zener.txt",
+		"/home/sfshah/Desktop/sem6_iitb_material/ee236_electronic_devices_lab/solution_lab2/schottky_rr/schottky_rr.cir",
+		"/home/sfshah/Desktop/sem6_iitb_material/ee236_electronic_devices_lab/solution_lab2/rectifier/rectifier.cir",
+		"/home/sfshah/Desktop/sem6_iitb_material/ee236_electronic_devices_lab/solution_lab2/schottky_rr.cir",
+		"/home/sfshah/Desktop/sem6_iitb_material/ee236_electronic_devices_lab/solution_lab2/zener_iv.cir",
+		"/home/sfshah/Desktop/sem6_iitb_material/ee236_electronic_devices_lab/solution_lab2/schottky_iv.cir",
+		"/home/sfshah/Desktop/sem6_iitb_material/ee236_electronic_devices_lab/solution_lab2/regulator.cir",
+		"/home/sfshah/Desktop/sem6_iitb_material/ee236_electronic_devices_lab/solution_lab2/rectifier.cir",
+		"/home/sfshah/Desktop/sem6_iitb_material/ee236_electronic_devices_lab/solution_lab2/doubler.cir",
+		"/home/sfshah/Desktop/sem6_iitb_material/ee236_electronic_devices_lab/solution_lab2/design1.cir",
 		"/home/sfshah/Desktop/sem6_iitb_material/ee236_electronic_devices_lab/solution_lab2/lcjslkdvsjj.cir",
 		"/home/sfshah/Desktop/sem6_iitb_material/ee236_electronic_devices_lab/solution_lab0/submission/lab0_ex2.cir",
-		"/home/sfshah/Desktop/sem6_iitb_material/ee236_electronic_devices_lab/solution_lab2/schottky_rr.cir",
-		"/home/sfshah/Desktop/sem6_iitb_material/ee236_electronic_devices_lab/solution_lab2/doubler.cir",
-		"/home/sfshah/Desktop/sem6_iitb_material/ee236_electronic_devices_lab/solution_lab2/schottky_iv.cir",
-		"/home/sfshah/Desktop/sem6_iitb_material/ee236_electronic_devices_lab/solution_lab2/zener_iv.cir",
 		"/home/sfshah/Desktop/sem6_iitb_material/ee236_electronic_devices_lab/solution_lab2/design2.cir",
-		"/home/sfshah/Desktop/sem6_iitb_material/ee236_electronic_devices_lab/solution_lab2/design1.cir",
-		"/home/sfshah/Desktop/sem6_iitb_material/ee236_electronic_devices_lab/solution_lab2/regulator.cir",
 		"/home/sfshah/Desktop/sem6_iitb_material/ee236_electronic_devices_lab/solution_lab2/schottky_iiv.cir",
 		"/home/sfshah/Desktop/sem6_iitb_material/ee236_electronic_devices_lab/solution_lab1/lab1_plot1_5.cir",
 		"/home/sfshah/Desktop/sem6_iitb_material/ee236_electronic_devices_lab/solution_lab1/lab1_plot1_1.cir",
@@ -560,19 +558,20 @@
 			[
 				{
 					"buffer": 0,
-					"file": "ee236_electronic_devices_lab/solution_lab2/schottky_iv.cir",
+					"file": "ee236_electronic_devices_lab/solution_lab2/zener_iv/zener_iv.cir",
+					"selected": true,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 618,
+						"buffer_size": 257,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								328,
-								328
+								158,
+								158
 							]
 						],
 						"settings":
@@ -595,61 +594,61 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content"
+								"bh_single_quote_content"
 							],
 							"syntax": "Packages/User/cir_files_ngspice.sublime-syntax"
 						},
@@ -657,314 +656,103 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"stack_multiselect": false,
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
 				{
 					"buffer": 1,
-					"file": "ee236_electronic_devices_lab/solution_lab2/schottky_rr.cir",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 264,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								156,
-								156
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content"
-							],
-							"syntax": "Packages/User/cir_files_ngspice.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"stack_multiselect": false,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "ee236_electronic_devices_lab/solution_lab2/regulator.cir",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 460,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								296,
-								296
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content"
-							],
-							"syntax": "Packages/User/cir_files_ngspice.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 144.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"stack_multiselect": false,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "ee236_electronic_devices_lab/solution_lab2/doubler.cir",
 					"selected": true,
-					"semi_transient": true,
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 163,
+						"buffer_size": 3917,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								163,
-								163
+								3917,
+								3917
 							]
 						],
 						"settings":
 						{
+							"__vi_external_disable": true,
+							"auto_complete": false,
+							"auto_complete_commit_on_tab": false,
 							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
+							"bracket_highlighter.clone_locations":
 							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
 							},
-							"bracket_highlighter.regions":
+							"bracket_highlighter.ignore": true,
+							"color_scheme": "Terminus.hidden-color-scheme",
+							"draw_centered": false,
+							"draw_indent_guides": false,
+							"draw_unicode_white_space": false,
+							"draw_white_space": "none",
+							"gutter": false,
+							"highlight_line": false,
+							"is_widget": true,
+							"result_base_dir": "/home/sfshah/Desktop/sem6_iitb_material",
+							"result_file_regex": null,
+							"result_line_regex": null,
+							"rulers":
 							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content"
+								500
 							],
-							"syntax": "Packages/User/cir_files_ngspice.sublime-syntax"
+							"scroll_past_end": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"terminus.highlight_counter": 98,
+							"terminus_view": true,
+							"terminus_view.args":
+							{
+								"auto_close": true,
+								"cancellable": false,
+								"cmd":
+								[
+									"/bin/bash",
+									"-i",
+									"-l"
+								],
+								"cwd": "/home/sfshah/Desktop/sem6_iitb_material",
+								"default_title": "Login Shell",
+								"env":
+								{
+									"LANG": "en_IN",
+									"TERM": "linux",
+									"TERMINUS_SUBLIME": "1",
+									"TERM_PROGRAM": "Terminus-Sublime"
+								},
+								"file_regex": null,
+								"line_regex": null,
+								"panel_name": null,
+								"tag": null,
+								"timeit": false,
+								"title": null
+							},
+							"terminus_view.cancellable": false,
+							"terminus_view.key.ctrl+k": true,
+							"terminus_view.key.ctrl+p": true,
+							"terminus_view.natural_keyboard": true,
+							"terminus_view.panel_name": null,
+							"terminus_view.tag": null,
+							"terminus_view.viewport_y": 1864.61538462,
+							"word_wrap": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2222.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -990,17 +778,31 @@
 				0,
 				0,
 				1,
+				2
+			],
+			[
+				1,
+				0,
+				2,
 				1
+			],
+			[
+				1,
+				1,
+				2,
+				2
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.555555555556,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
+			0.686348862405,
 			1.0
 		]
 	},
@@ -1034,6 +836,42 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"zene",
+				"ee236_electronic_devices_lab/solution_lab2/zener_iv/zener_iv.cir"
+			],
+			[
+				"ze",
+				"ee236_electronic_devices_lab/solution_lab2/models/zener.txt"
+			],
+			[
+				"sch",
+				"ee236_electronic_devices_lab/solution_lab2/schottky_rr/schottky_rr.cir"
+			],
+			[
+				"rec",
+				"ee236_electronic_devices_lab/solution_lab2/rectifier/rectifier.cir"
+			],
+			[
+				"s",
+				"ee236_electronic_devices_lab/solution_lab2/schottky_rr.cir"
+			],
+			[
+				"z",
+				"ee236_electronic_devices_lab/solution_lab2/zener_iv.cir"
+			],
+			[
+				"reg",
+				"ee236_electronic_devices_lab/solution_lab2/regulator.cir"
+			],
+			[
+				"re",
+				"ee236_electronic_devices_lab/solution_lab2/rectifier.cir"
+			],
+			[
+				"dou",
+				"ee236_electronic_devices_lab/solution_lab2/doubler.cir"
+			],
 			[
 				"delivery",
 				"fraazo-store-api/app/models/delivery.rb"
