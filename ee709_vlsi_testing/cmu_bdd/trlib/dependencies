@@ -1,0 +1,3 @@
+tr.o: tr.c truser.h /home/madhav/courses/ee709/cmu_bdd/include/bdduser.h \
+ /home/madhav/courses/ee709/cmu_bdd/include/memuser.h vec.h
+vec.o: vec.c /home/madhav/courses/ee709/cmu_bdd/include/memuser.h vec.h
