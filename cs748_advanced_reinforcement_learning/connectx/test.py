@@ -1,14 +1,28 @@
 from mcts import *
-# from connectx import *
+import time
+from kaggle_environments import evaluate, make, utils
 
-default_state = ConnectXState(np.zeros((7, 6)), 4)
-root = MCTSNode(default_state)
+env = make("connectx", debug=True)
+configuration = env.configuration
+print(configuration)
 
-for _ in range(10000):
-  selected = root.selection()
-  selected.expansion()
-  score = selected.simulate()
-  selected.backpropagate(score)
+def mcts_agent_numpy(observation, configuration):
+  global current_state
+  start_time = time.time()
+  termination_time = configuration.timeout - 0.1
 
-for c in root.children:
-  print(c.ucb_value)
+  board = np.flip(np.array(observation.board).reshape(
+    (configuration.columns, configuration.rows)), axis=1)
+  mark = observation.mark
+
+  try:
+    raise Exception()
+    current_state = current_state.child_of_action
+  except:
+    state = ConnectXState(board, configuration.inarow)
+    current_state = MCTSNode(state)
+
+  while time.time() - start_time <= termination_time:
+    current_state.iteration()
+
+  return current_state.best_move()

@@ -41,7 +41,7 @@ class MCTSNode():
   @property
   def is_leaf(self):
     # no selection if either terminal state, or atleast one unsimulated child
-    return (len(self.unexpanded_moves) != 0) and (not self.is_terminal)
+    return (len(self.unexpanded_moves) != 0) or (self.is_terminal)
 
   @property
   def ucb_value(self):
@@ -59,7 +59,7 @@ class MCTSNode():
     return self
 
   def expansion(self):
-    if self.is_terminal:
+    if self.is_terminal or len(self.unexpanded_moves) == 0:
       return
     c = random.choice(self.unexpanded_moves)
     self.unexpanded_moves.remove(c)
@@ -102,3 +102,13 @@ class MCTSNode():
     self.total_value += score
     if self.parent:
       self.parent.backpropagate(1 - score)
+
+  def iteration(self):
+    selected = self.selection()
+    selected.expansion()
+    score = selected.simulate()
+    selected.backpropagate(score)
+
+  def best_move(self):
+    ucb_vals = [child.ucb_value for child in self.children]
+    return self.children[np.argmax(ucb_vals)].parent_action
