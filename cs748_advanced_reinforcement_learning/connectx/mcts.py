@@ -75,14 +75,8 @@ class MCTSNode():
     if self.is_terminal:
       return self.terminal_value
 
-    state = self.state
-    playable_cols = [c for c in range(state.board.shape[0])\
-      if state.playable_column(c)]
-    c = random.choice(playable_cols)
-    child_state = ConnectXState(state.play(c), self.state.inarow)
-    winner = state.winning
-    is_draw = state.draw
-    is_terminal = ((winner != 0) or is_draw)
+    child_state = self.state
+    is_terminal = False
     while not is_terminal:
       playable_cols = [c for c in range(child_state.board.shape[0])\
         if child_state.playable_column(c)]
@@ -93,7 +87,7 @@ class MCTSNode():
       is_terminal = ((winner != 0) or is_draw)
     if is_draw:
       return 0.5
-    if winner == state.next_player:
+    if winner == self.state.next_player:
       return 1
     return 0
 
@@ -110,5 +104,16 @@ class MCTSNode():
     selected.backpropagate(score)
 
   def best_move(self):
-    ucb_vals = [child.ucb_value for child in self.children]
-    return self.children[np.argmax(ucb_vals)].parent_action
+    total_visits = [child.total_visits for child in self.children]
+    return self.children[np.argmax(total_visits)].parent_action
+
+  def child_of_action(self, new_board):
+    old_board = self.state.board
+    for c in range(old_board.shape[0]):
+      if not (old_board[c]==new_board[c]).all():
+        last_action = c
+        break
+    for child in self.children:
+      if child.parent_action == c:
+        return child
+    return None

@@ -91,4 +91,4 @@ class ConnectXState():
     return new_board
 
   def playable_column(self, col):
-    return self.board[col, -1]==0
+    return self.board[col, -1] == 0
