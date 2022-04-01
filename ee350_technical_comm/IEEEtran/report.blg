@@ -1,0 +1,19 @@
+[0] Config.pm:304> INFO - This is Biber 2.14 (beta)
+[0] Config.pm:307> INFO - Logfile is 'report.blg'
+[128] biber:322> INFO - === Thu Mar 31, 2022, 20:00:04
+[151] Biber.pm:415> INFO - Reading 'report.bcf'
+[266] Biber.pm:943> INFO - Found 12 citekeys in bib section 0
+[289] Biber.pm:4256> INFO - Processing section 0
+[289] Utils.pm:75> INFO - Globbing data source 'sample.bib'
+[289] Utils.pm:91> INFO - Globbed data source 'sample.bib' to sample.bib
+[309] Biber.pm:4455> INFO - Looking for bibtex format file 'sample.bib' for section 0
+[311] bibtex.pm:1653> INFO - LaTeX decoding ...
+[366] bibtex.pm:1471> INFO - Found BibTeX data source 'sample.bib'
+[444] Utils.pm:293> WARN - month field 'mar' in entry 'lai_robbins' is not an integer - this will probably not sort properly.
+[554] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[555] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[555] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[555] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[580] bbl.pm:652> INFO - Writing 'report.bbl' with encoding 'UTF-8'
+[594] bbl.pm:755> INFO - Output to report.bbl
+[594] Biber.pm:128> INFO - WARNINGS: 1

@@ -1,0 +1,140 @@
+@article{bandit_intro,
+author = {Herbert Robbins},
+title = {{Some aspects of the sequential design of experiments}},
+volume = {58},
+journal = {Bulletin of the American Mathematical Society},
+number = {5},
+publisher = {American Mathematical Society},
+pages = {527 -- 535},
+year = {1952},
+doi = {bams/1183517370},
+URL = {https://doi.org/}
+}
+
+@phdthesis{ab_testing,
+author={Duff,Michael O.},
+year={2002},
+title={Optimal learning: Computational procedures for Bayes -adaptive Markov decision processes},
+journal={ProQuest Dissertations and Theses},
+pages={247},
+note={Copyright - Database copyright ProQuest LLC; ProQuest does not claim copyright in the individual underlying works; Last updated - 2021-11-09},
+abstract={This dissertation considers a particular aspect of sequential decision making under uncertainty in which, at each stage, a decision-making agent operating in an uncertain world takes an action that elicits a reinforcement signal and causes the state of the world to change. Optimal learning is a pattern of behavior that yields the highest expected total reward over the entire duration of an agent's interaction with its uncertain world. The problem of determining an optimal learning strategy is a sort of meta-problem, with optimality defined with respect to a distribution of environments that the agent is likely to encounter. Given this prior uncertainty over possible environments, the optimal-learning agent must collect and use information in an intelligent way, balancing greedy exploitation of certainty-equivalent world models with exploratory actions aimed at discerning the true state of nature. My approach to approximating optimal learning strategies retains the full model of the sequential decision process that, in incorporating a Bayesian model for evolving uncertainty about unknown process parameters, takes the form of a Markov decision process defined over a set of “hyperstates” whose cardinality grows exponentially with the planning horizon. I develop computational procedures that retain the full Bayesian formulation, but sidestep intractability by utilizing techniques from reinforcement learning theory (specifically, Monte-Carlo simulation and the adoption of parameterized function approximators). By pursuing an approach that is grounded in a complete Bayesian world model, I develop algorithms that produce policies that exhibit performance gains over simple heuristics. Moreover, in contrast to many heuristics, the justification or legitimacy of the policies follows directly from the fact that they are clearly motivated by a complete characterization of the underlying decision problem to be solved. This dissertation's contributions include a reinforcement learning algorithm for estimating Gittins indices for multi-armed bandit problems, a Monte-Carlo gradient-based algorithm for approximating solutions to general problems of optimal learning, a gradient-based scheme for improving optimal learning policies instantiated as finite-state stochastic automata, and an investigation of diffusion processes as analytical models for evolving uncertainty.},
+keywords={Applied sciences; Pure sciences; Bayes-adaptive; Computational procedures; Markov decision processes; Optimal learning; Reinforcement learning; Computer science; Operations research; Statistics; Artificial intelligence; 0463:Statistics; 0796:Operations research; 0984:Computer science; 0800:Artificial intelligence},
+isbn={978-0-493-52573-0},
+language={English},
+url={https://www.proquest.com/dissertations-theses/optimal-learning-computational-procedures-bayes/docview/251665294/se-2?accountid=27542},
+}
+
+@article{medical_testing,
+ ISSN = {01621459},
+ URL = {http://www.jstor.org/stable/2283274},
+ abstract = {A simple cost function approach is proposed for designing an optimal clinical trial when a total of N patients with a disease are to be treated with one of two medical treatments. The cost function is constructed with but one cost, the consequences of treating a patient with the superior or inferior of the two treatments. Fixed sample size and sequential trials are considered. Minimax, maximin, and Bayesian approaches are used for determining the optimal size of a fixed sample trial and the optimal position of the boundaries of a sequential trial. Comparisons of the different approaches are made as well as comparisons of the results for the fixed and sequential plans.},
+ author = {Theodore Colton},
+ journal = {Journal of the American Statistical Association},
+ number = {302},
+ pages = {388--400},
+ publisher = {[American Statistical Association, Taylor & Francis, Ltd.]},
+ title = {A Model for Selecting One of Two Medical Treatments},
+ volume = {58},
+ year = {1963}
+}
+
+@book{lattimore_intro,
+  title     = {Bandit Algorithms},
+  author    = {Tor Lattimore and Csaba Szepesvari},
+  year      = {2020},
+  publisher = {[Cambridge University Press]},
+  pages = {10--13}
+}
+
+@book{lattimore_ucb,
+  title     = {Bandit Algorithms},
+  author    = {Tor Lattimore and Csaba Szepesvari},
+  year      = {2020},
+  publisher = {[Cambridge University Press]},
+  pages = {101--110}
+}
+
+@article{lai_robbins,
+author = {Lai, T.L and Robbins, Herbert},
+title = {Asymptotically Efficient Adaptive Allocation Rules},
+year = {1985},
+issue_date = {March, 1985},
+publisher = {Academic Press, Inc.},
+address = {USA},
+volume = {6},
+number = {1},
+issn = {0196-8858},
+url = {https://doi.org/10.1016/0196-8858(85)90002-8},
+doi = {10.1016/0196-8858(85)90002-8},
+journal = {Adv. Appl. Math.},
+month = {mar},
+pages = {4–22},
+numpages = {19}
+}
+
+@ARTICLE{KL_divergence,  author={van Erven, Tim and Harremos, Peter},  journal={IEEE Transactions on Information Theory},   title={Rényi Divergence and Kullback-Leibler Divergence},   year={2014},  volume={60},  number={7},  pages={3797-3820},  doi={10.1109/TIT.2014.2320500}
+}
+
+@MISC{chernoffhoeffdinginequality,
+    author = {Jeff M. Phillips},
+    title = {Chernoff-Hoeffding Inequality and Applications},
+    year = {}
+}
+
+@article{thompson_sampling,
+url = {http://dx.doi.org/10.1561/2200000070},
+year = {2018},
+volume = {11},
+journal = {Foundations and Trends® in Machine Learning},
+title = {A Tutorial on Thompson Sampling},
+doi = {10.1561/2200000070},
+issn = {1935-8237},
+number = {1},
+pages = {1-96},
+author = {Daniel J. Russo and Benjamin Van Roy and Abbas Kazerouni and Ian Osband and Zheng Wen}
+}
+
+@article{exp3,
+author = {Auer, Peter and Cesa-Bianchi, Nicolò and Freund, Y and Schapire, RE},
+year = {2003},
+month = {01},
+pages = {48-77},
+title = {The nonstochastic multiarmed bandit problem},
+volume = {32},
+journal = {SIAM Journal on Computing}
+}
+
+@inproceedings{bast,
+author = {Coquelin, Pierre-Arnaud and Munos, R\'{e}mi},
+title = {Bandit Algorithms for Tree Search},
+year = {2007},
+isbn = {0974903930},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Bandit based methods for tree search have recently gained popularity when applied to huge trees, e.g. in the game of go [6]. Their efficient exploration of the tree enables to return rapidly a good value, and improve precision if more time is provided. The UCT algorithm [8], a tree search method based on Upper Confidence Bounds (UCB) [2], is believed to adapt locally to the effective smoothness of the tree. However, we show that UCT is "over-optimistic" in some sense, leading to a worst-case regret that may be very poor. We propose alternative bandit algorithms for tree search. First, a modification of UCT using a confidence sequence that scales exponentially in the horizon depth is analyzed. We then consider Flat-UCB performed on the leaves and provide a finite regret bound with high probability. Then, we introduce and analyze a Bandit Algorithm for Smooth Trees (BAST) which takes into account actual smoothness of the rewards for performing efficient "cuts" of sub-optimal branches with high confidence. Finally, we present an incremental tree expansion which applies when the full tree is too big (possibly infinite) to be entirely represented and show that with high probability, only the optimal branches are indefinitely developed. We illustrate these methods on a global optimization problem of a continuous function, given noisy values.},
+booktitle = {Proceedings of the Twenty-Third Conference on Uncertainty in Artificial Intelligence},
+pages = {67–74},
+numpages = {8},
+location = {Vancouver, BC, Canada},
+series = {UAI'07}
+}
+
+@inproceedings{contextual,
+author = {Li, Lihong and Chu, Wei and Langford, John and Schapire, Robert E.},
+title = {A Contextual-Bandit Approach to Personalized News Article Recommendation},
+year = {2010},
+isbn = {9781605587998},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1772690.1772758},
+doi = {10.1145/1772690.1772758},
+abstract = {Personalized web services strive to adapt their services (advertisements, news articles, etc.) to individual users by making use of both content and user information. Despite a few recent advances, this problem remains challenging for at least two reasons. First, web service is featured with dynamically changing pools of content, rendering traditional collaborative filtering methods inapplicable. Second, the scale of most web services of practical interest calls for solutions that are both fast in learning and computation.In this work, we model personalized recommendation of news articles as a contextual bandit problem, a principled approach in which a learning algorithm sequentially selects articles to serve users based on contextual information about the users and articles, while simultaneously adapting its article-selection strategy based on user-click feedback to maximize total user clicks.The contributions of this work are three-fold. First, we propose a new, general contextual bandit algorithm that is computationally efficient and well motivated from learning theory. Second, we argue that any bandit algorithm can be reliably evaluated offline using previously recorded random traffic. Finally, using this offline evaluation method, we successfully applied our new algorithm to a Yahoo! Front Page Today Module dataset containing over 33 million events. Results showed a 12.5 click lift compared to a standard context-free bandit algorithm, and the advantage becomes even greater when data gets more scarce.},
+booktitle = {Proceedings of the 19th International Conference on World Wide Web},
+pages = {661–670},
+numpages = {10},
+keywords = {recommender systems, personalization, web service, contextual bandit, exploration/exploitation dilemma},
+location = {Raleigh, North Carolina, USA},
+series = {WWW '10}
+}
+
