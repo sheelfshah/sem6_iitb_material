@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.3.31)  31 MAR 2022 20:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.3.31)  1 APR 2022 15:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -633,13 +633,7 @@ File: plot.png Graphic file (type png)
 <use plot.png>
 Package pdftex.def Info: plot.png  used on input line 145.
 (pdftex.def)             Requested size: 250.38434pt x 166.92546pt.
- [2 <./plot.png>] [3]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
-65.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
+ [2 <./plot.png>]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -651,9 +645,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[4
-
-] (./report.aux)
+[3] (./report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -662,13 +654,13 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 12253 strings out of 483107
- 212060 string characters out of 5964630
+ 12227 strings out of 483107
+ 211684 string characters out of 5964630
  854796 words of memory out of 5000000
- 27148 multiletter control sequences out of 15000+600000
- 570176 words of font info for 99 fonts, out of 8000000 for 9000
+ 27126 multiletter control sequences out of 15000+600000
+ 569843 words of font info for 98 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 37i,11n,45p,2498b,1596s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 35i,11n,42p,2498b,1596s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
@@ -682,10 +674,10 @@ y5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
 live/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on report.pdf (4 pages, 175752 bytes).
+Output written on report.pdf (3 pages, 168948 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 70 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
