@@ -1,9 +1,9 @@
 # ignore contents of all private folders
-private*/*
+# private*/*
 
 # ignore all assignment solutions
-solution_*
-report_*
+# solution_*
+# report_*
 
 # ignore videos
 *.mp4

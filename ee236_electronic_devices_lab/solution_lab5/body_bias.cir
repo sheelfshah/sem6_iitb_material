@@ -1,0 +1,33 @@
+19D070052 Sheel Shah I_d vs V_ds
+
+.include pmos.txt
+
+** 1 2 3 4: drain gate source body
+m1 1 2 0 4 ALD1107
+v_dd 4 0
+v_id 10 1 0
+v_ds 10 0 -0.2
+v_gs 2 0
+
+
+.dc v_gs -5 0 0.1 v_dd 0 4 1
+
+* start control
+.control
+set color0 = rgb:f/f/e
+set color1 = rgb:1/1/1
+
+run
+
+plot i(v_id) vs v(2)
+
+** v_t by extrapolating linear region:
+** 0: -0.9,-1: -1.13, -2: -1.26, -3: -1.36, -4: -1.48
+** v_t increases in magnitude as v_sb increases in magnitude
+
+** -0.9 = v_to
+** -1.48 = -0.9 + gamma(sqrt(4.8) - sqrt(0.8))
+** gamma = -0.447
+.endc
+
+.end

@@ -1,0 +1,32 @@
+Sheel Shah 19D070052
+
+.include bc547.txt
+
+q0 3 2 0 bc547a
+r1 1 2 100k
+r2 3 4 1k
+v_cc 4 0 9.5
+v_bb 1 0
+
+.dc v_bb 0 5 0.1
+
+.control
+run
+
+
+meas dc v_bb1 find v(1) when i(v_cc) = -4.5m
+meas dc v_bb2 find v(1) when v(3) = 5
+meas dc i_b find i(v_bb) when i(v_cc) = -4.5m
+let i_b = -i_b
+
+** beta: 
+print 4.5m/i_b
+** gm:
+print 4.5m/25.8m
+** r_pi:
+print (4.5m/i_b)/(4.5m/25.8m)
+** ro:
+print 74/4.5m
+
+.endc
+.end

@@ -1,0 +1,41 @@
+19D070052 Sheel Shah CV plots
+.include Solar_Cell.txt
+.include TL071.txt
+
+
+v_cc1 100 0 15
+v_cc2 101 0 -15
+
+v_dc 1 0
+r1 1 2 1k
+r2 2 3 10k
+v_sin 3 0 sin(0 0.5 1k 0 0)
+x_op1 0 2 100 101 4 TL071
+r_f 2 4 1k
+
+x_dut 4 5 solar_cell IL_val = 0e-3
+x_op2 0 5 100 101 6 TL071
+r_fb 5 6 100k
+c_fb 5 6 4.7n
+
+.dc v_dc 0 2 0.001
+* start control
+.control
+set color0 = rgb:f/f/e
+set color1 = rgb:1/1/1
+run
+
+let x = (1k*2*3.14*100k*4.7n)^2
+let y = sqrt(1 + (1/x))
+let c_dut = abs(v(6)/v(4)) * 4.7n * y
+
+* plot 1/(c_dut * c_dut / (16 * 16)) vs v(4)
+plot c_dut vs v(1)
+** dx/dy = -6.48491e-17
+** N_d = 7.86e14
+** v_bi = -0.79V
+
+* end control
+.endc
+
+.end

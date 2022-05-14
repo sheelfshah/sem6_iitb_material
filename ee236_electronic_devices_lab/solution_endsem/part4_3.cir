@@ -1,0 +1,28 @@
+19D070052 Sheel Shah I_d vs V_ds
+.include CMOS.txt
+
+
+v_dd 1 0 3.3
+v_in 2 0
+v_bb_p 10 0 3.3
+v_bb_n 11 0 0
+
+m_p 3 2 1 10 cmosp L=0.4u W=3.36u
+m_n 3 2 0 11 cmosn L=0.4u W=1.3u
+c0 3 4 0.05p
+v_dummy 4 0
+
+.dc v_in 0 3.3 0.01
+.control
+run
+plot i(v_dd) vs v(2)
+
+** voh = 2.98
+** vol = 0.24
+** vih = 2.00
+** vil = 1.42
+** nmh = voh - vih = 0.98
+** nml = vil - vol = 1.18
+
+.endc
+.end

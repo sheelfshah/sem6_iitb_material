@@ -1,0 +1,13 @@
+19D070052 Sheel Shah Design 1
+** used shunt clipper with schottky instead of pn
+
+v_in 1 0
+d0 2 1
+r0 2 3 1k
+v_dc 3 0 2.3
+.dc v_in -5 5 0.01
+.control
+run
+plot v(2) vs v(1)
+.endc
+.end

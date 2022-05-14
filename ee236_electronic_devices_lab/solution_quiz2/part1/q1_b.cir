@@ -1,0 +1,51 @@
+19D070052 Sheel Shah I_d vs V_ds
+
+.include PMOS_NMOS.txt
+
+** 1 2 0 4: drain gate source body
+m1 1 2 5 4 cmosn L=0.4u W=4u
+v_dd 4 0 -3.3
+v_id 10 1 0
+v_ds 10 0
+v_gs 2 0 -3.3
+r_l 5 0 10k
+
+
+.dc v_ds -3.3 3.3 0.01
+
+* start control
+.control
+set color0 = rgb:f/f/e
+set color1 = rgb:1/1/1
+
+run
+
+plot v(5) vs v(10)
+plot abs(v(10)/i(v_id)) vs v(10)
+
+
+.endc
+
+.end
+
+** rds by seeing dx/dy near origin:
+** -2.5: 3.8k, -3: 2.9k, -3.5: 2.3k, -4: 1.8k
+
+** r_0 by seeing dx/dy in saturation:
+** -2.5: 168302, -3: 92307, -3.5: 59446, -4: 40978
+
+** early voltage:
+** sat dy/dx = 1.70246e-05, x0 = -4.68615, y0 = -0.000619565
+** c = y-mx = -0.000619565 - 1.70246e-05*(-4.68615) = -5.39785e-04
+** v_a = -c/m = 3.170618e+01
+
+* triode: id = 0.5K(2(vgs-vt)vds - vds^2)
+* for small vds, ignore square term
+* rds = vds/id
+
+* saturation: id = 0.5K(vgs-vt)^2(1+lamda*vds)
+* lamda = slope of id vs vds in saturation 
+* ro = 1/lamda
+* x_intercept of interpolation = va
+
+* vt = vvt0 + gamma(sqrt(phi + vbs) - sqrt(phi))

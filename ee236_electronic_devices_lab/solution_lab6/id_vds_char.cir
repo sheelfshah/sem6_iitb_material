@@ -1,0 +1,38 @@
+19D070052 Sheel Shah I_d vs V_ds
+
+.include ALD1105N.txt
+
+** 1 2 3 4: drain gate source body
+m1 1 2 0 4 ALD1105N
+v_dd 4 0 0
+v_id 10 1 0
+v_ds 10 0
+v_gs 2 0
+
+
+.dc v_ds 0 5 0.1 v_gs 2.5 4 0.5
+
+* start control
+.control
+set color0 = rgb:f/f/e
+set color1 = rgb:1/1/1
+
+run
+
+plot i(v_id) vs v(10)
+
+** rds by seeing dx/dy near origin:
+** 2.5: 1248.18, 3: 1013.56, 3.5: 827.737, 4: 682.482
+
+** r_0 by seeing dx/dy in saturation:
+** 2.5: 47674, 3: 25735, 3.5: 19919, 4: 12904
+
+** early voltage:
+** sat dy/dx = 7.74935e-05, x0 = 4.05455, y0 = 0.00273448
+** c = y-mx = 0.00273448 - 7.74935e-05*(4.05455) = 2.420279e-03
+** v_a = -c/m = -3.12320e+01
+** 2.5: -31, 3: -29, 3.5: -34, 4: -32
+
+.endc
+
+.end

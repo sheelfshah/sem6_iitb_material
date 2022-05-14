@@ -1,0 +1,37 @@
+19D070052 Sheel Shah I_d vs V_ds
+
+.include PMOS_NMOS.txt
+
+** 1 2 0 4: drain gate source body
+m1 1 21 5 41 cmosp1 L=0.3u W=4u 
+m2 1 22 5 42 cmosn L=0.4u W=4u
+v_dd1 41 0 3.3
+v_dd2 42 0 -3.3
+v_id 10 1 0
+v_ds 10 0
+v_gs1 21 0 -3.3
+v_gs2 22 0 3.3
+r_l 5 0 10k
+
+
+.dc v_ds -3.3 3.3 0.01
+
+* start control
+.control
+set color0 = rgb:f/f/e
+set color1 = rgb:1/1/1
+
+run
+
+* plot v(5) vs v(10)
+plot abs(v(10)/i(v_id))-10k vs v(10)
+
+
+.endc
+
+.end
+
+** r_on max = 1164
+** r_on is getting paralleled, and r_on for pmos is higher. Around peak, r_on for pmos becomes equal to r_on for nmos, which is rising
+
+

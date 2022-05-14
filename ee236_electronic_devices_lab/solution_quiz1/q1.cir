@@ -1,0 +1,28 @@
+q1
+.include Opamp_ua741.txt
+.include black_box.txt
+
+v_in 1 0 sin(0 1 1k 0 0)
+v_cc1 2 0 15
+v_cc2 3 0 -15
+x_bb 1 2 3 4 0 black_box
+r1 4 5 1k
+r2 5 1 2k
+x_op 0 5 2 3 6 UA741
+r3 5 6 2k
+
+.tran 10u 5m
+
+* start control
+.control
+set color0 = rgb:f/f/e
+set color1 = rgb:1/1/1
+
+run
+
+plot v(6) vs v(1)
+
+* end control
+.endc
+
+.end

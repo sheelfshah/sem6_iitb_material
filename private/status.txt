@@ -1,0 +1,30 @@
+# 3rd Jan = start of week 0 (norm cs748)
+# week x lec y = x.y, y = 1/2/3
+
+lecs/notes:
+	ee344: 
+	ee350: 3.3 done, no notes
+	ee708: 8.3 lecs done
+	ee709: 8.1 done
+	ee737: 8.2 done
+	cs748: 1 done
+	cs754: lec 21 done
+
+labs:
+	ee236: midsem done
+
+pending:
+	ee344 report 5hrs
+	ee709 1 lec
+	cs748 project work 10hrs
+	ee344 lecs 10hrs
+	ee350 lecs 15hrs
+	ee350 project 15hrs
+	cs754 project 20hrs
+	cs754 lecs 3hrs
+	
+
+oh boy, this is one semester i am never forgetting
+quick course reviews:
+
+709: easy, 737: god knows, 708: greatly taught, 748: okay needs more work, 754: nice

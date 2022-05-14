@@ -1,0 +1,24 @@
+19D070052 Sheel Shah Plot 1 for 1N914
+
+.include models/white_5mm.txt
+v_dc 1 0
+r1 1 2 100
+r2 2 0 1k
+** dummy voltage
+v_d 2 3 0
+d0 3 4 White
+r3 4 0 100
+
+.dc v_dc 0.01 5 0.01
+
+.control
+
+run
+* plot i(v_d) vs v(3)-v(4)
+.endc
+
+.end
+
+* plot dc1.I(v_d) vs dc1.V(3)-dc1.V(4) dc2.I(v_d) vs dc2.V(3)-dc2.V(4) dc3.I(v_d) vs dc3.V(3)-dc3.V(4) dc4.I(v_d) vs dc4.V(3)-dc4.V(4) dc5.I(v_d) vs dc5.V(3)-dc5.V(4)
+
+* plot log(dc1.I(v_d)) vs dc1.V(3)-dc1.V(4) log(dc2.I(v_d)) vs dc2.V(3)-dc2.V(4) log(dc3.I(v_d)) vs dc3.V(3)-dc3.V(4) log(dc4.I(v_d)) vs dc4.V(3)-dc4.V(4) log(dc5.I(v_d)) vs dc5.V(3)-dc5.V(4)

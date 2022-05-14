@@ -1,0 +1,23 @@
+19D070052 Sheel Shah I_d vs V_ds
+
+.include NMOSFET.txt
+
+** 1 2 3 4: drain gate source body
+m1 1 2 0 4 NMOSFET
+v_dd 4 0 0
+v_id 10 1 0
+v_ds 10 0 0.3
+v_gs 2 0 0.6
+
+
+.dc temp 20 80 10
+
+* start control
+.control
+run
+ 
+plot (2 * i(v_id) / (2 * (v(2) - 0.5710859) * 0.3) / (450n * 3))
+
+.endc
+
+.end

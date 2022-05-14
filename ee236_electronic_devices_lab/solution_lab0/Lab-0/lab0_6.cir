@@ -1,0 +1,18 @@
+RC Circuit Transient Analysis using Subcircuits
+*Providing some default component values
+.subckt RC subcircuit IN OUT COM r1 = 1k c1 = 1u
+r IN OUT {r1}
+c OUT COM {c1}
+.ends
+vsin INPUT gnd sin(0 2.5 1k 0 0)
+xrc1 INPUT 1 gnd RC subcircuit
+*Instantiating component values for 2nd subcircuit
+xrc2 1 2 gnd RC subcircuit r1 = 100 c1 = 0.1u
+xrc3 2 OUTPUT gnd RC subcircuit
+.control
+set color0 = rgb:f/f/e
+set color1 = rgb:/1/1/1
+tran 0.02m 40m
+plot v(INPUT) v(OUTPUT)
+.endc
+.end

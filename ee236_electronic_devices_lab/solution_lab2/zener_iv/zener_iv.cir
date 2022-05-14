@@ -1,0 +1,21 @@
+19D070052 Sheel zener iv
+
+.include models/zener.txt
+
+v_dc 1 0
+r_1_diode 1 12 100
+r_2_diode 12 0 1k
+** dummy voltage
+v_d_diode 12 13 0
+x_diode 13 14 DI_1N4734A
+r_3_diode 14 0 100
+
+.dc v_dc -8 8 0.01
+
+.control
+
+run
+plot i(v_d_diode) vs v(13)-v(14)
+.endc
+
+.end

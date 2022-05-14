@@ -1,0 +1,32 @@
+19D070052 Sheel q2
+
+.include X.txt
+.include Y.txt
+
+
+v_dc 1 0
+r_1_diodex 1 12 100
+r_2_diodex 12 0 1k
+** dummy voltage
+v_d_diodex 12 13 0
+d_diodex 13 14 X
+r_3_diodex 14 0 100
+
+r_1_diodey 1 22 100
+r_2_diodey 22 0 1k
+** dummy voltage
+v_d_diodey 22 23 0
+d_diodey 23 24 Y
+r_3_diodey 24 0 100
+
+.dc v_dc 0.01 5 1
+
+.control
+set color0 = rgb:f/f/e
+set color1 = rgb:1/1/1
+
+run
+plot log(i(v_d_diodex)) vs v(13)-v(14) log(i(v_d_diodey)) vs v(23)-v(24)
+.endc
+
+.end

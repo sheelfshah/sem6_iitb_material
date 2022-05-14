@@ -1,0 +1,28 @@
+19d070052 iv
+
+.include rn142s.txt
+
+v_dc 1 0
+r_1_diode 1 12 100
+r_2_diode 12 0 1k
+** dummy voltage
+v_d_diode 12 13 0
+d_diode 13 14 DRN142S
+r_3_diode 14 0 100
+
+.dc v_dc 0.01 2 0.01
+
+.control
+
+run
+plot ln(i(v_d_diode)) vs v(13)-v(14)
+* print i(v_d_diode)
+.endc
+
+.end
+
+** 1_sat = 1.73e-10 A
+** forward voltage = 0.62 V
+** piv = -59.9 V
+** dx/dy = 0.045
+** eta = 1.75

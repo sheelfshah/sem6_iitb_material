@@ -1,0 +1,20 @@
+19D070052 Sheel Shah Design 2
+
+.include models/Diode_1N914.txt
+
+r1 1 4 1k
+d1 4 2 1N914
+vdc 2 0 dc 4.8
+d2 3 4 1N914
+vdc2 0 3 dc 4
+
+v_in 1 0
+
+.dc v_in -7 8 0.01
+.control
+
+run
+plot v(4) vs v(1)
+.endc
+
+.end

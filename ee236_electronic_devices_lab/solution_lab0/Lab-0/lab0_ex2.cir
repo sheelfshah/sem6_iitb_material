@@ -1,0 +1,70 @@
+19D070052 Sheel Shah Bridge Rectifier
+
+.include ngspice_model-files_Lab-0/Diode_1N914.txt
+* describe circuit
+* <element name> <nodes list> <value>
+* voltage_nodename positive_node negative_node dc_value/function
+    * v 1 0 5
+* sine voltage: sin(offset amplitude frequency time_delay damping_factor)
+    * v 1 0 sin(0 2 1k 0 0)
+* peicewise linear: pwl(time1 value1 time2 value2 ...)
+    * v 1 0 pwl(0 0 10m 0 11m 5 20m 5)
+* pulse waveform: pulse(initial-value pulsed-value delay_time rise_time fall_time pulse_width period)
+    * v 1 0 pulse(0 1 1m 1m 1m 6m 10m)
+* exponentioal waveform: exp(initial pulsed rise-delay rise-time fall-delay fall-time)
+    * v 1 0 exp(1 0 10m 10m 10m 10m)
+* ac analysis: dc dc_val ac ac_val
+    * v 1 0 dc 0 ac 1
+* elements
+* points:
+*   1: vin1, top point of bridge, 2: vin2, bottom point of bridge
+*   3: right, 4: left
+v_in1 1 0 sin(0 6 50 0 0)
+v_in2 2 0 sin(0 -6 50 0 0)
+d1 1 3 1N914
+d2 2 3 1N914
+d3 4 2 1N914
+d4 4 1 1N914
+
+r_l 3 4 10k
+
+* dc analysis: dc node_name initial_value final_value step
+    * .dc v 0 5 0.1
+    * .dc vdd 0 5 0.01 vgg 1 5 1
+* transient analysis: tran timestep end_time
+    * .tran 10u 20m
+* ac analysis: ac lin/dec num_points start_freq end_freq
+    * .ac dec 10 1 1k
+* analysis
+.tran 0.01m 0.2
+
+* start control
+.control
+set color0 = rgb:f/f/e
+set color1 = rgb:1/1/1
+
+run
+
+* plot vdb(2); plots magnitude in dB
+* plot phase(v(2)); plots phase of v(2)
+* plot i(v); plots current through voltage_element v, only voltage elements allowed
+* plot v(1) vs v(2); for output vs input
+* use dummy voltage elements to measure current through all elements
+* plotting
+plot v(3) - v(4), v(1)-v(2)
+plot v(3)-v(4) vs v(1)-v(2)
+
+set hcopydevtype=postscript
+hardcopy ee236_electronic_devices_lab/plots/lab0_ex2_1.ps v(3) - v(4), v(1)-v(2)
+hardcopy ee236_electronic_devices_lab/plots/lab0_ex2_2.ps v(3)-v(4) vs v(1)-v(2)
+* plotting_value is what you write after plot in plot statement
+* meas ac peak MAX vmag(3)
+* meas ac fpeak WHEN vmag(3)=peak 
+* let f3db = peak/sqrt(2)
+* meas ac f1 WHEN vmag(3)=f3db RISE=1      
+* meas ac f2 WHEN vmag(3)=f3db FALL=1
+
+* end control
+.endc
+
+.end

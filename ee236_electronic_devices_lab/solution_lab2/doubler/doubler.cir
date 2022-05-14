@@ -1,0 +1,18 @@
+19D070052 Sheel Voltage doubler
+
+
+v_in 1 0 sin(0 10 1k 0 0)
+c1 1 2 10u
+d1 0 2
+d2 2 3
+c2 3 0 10u
+r_l 3 0 47k
+
+.tran 10u 20m
+.control
+
+run
+plot v(3) v(1)
+.endc
+
+.end

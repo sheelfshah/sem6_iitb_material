@@ -1,0 +1,47 @@
+19d070052 rf switch
+
+.include rn142s.txt
+.include Diode_1N914.txt
+
+v_in 1 0 sin(0 0.5 10000k 0 0)
+v_dc 2 1 3
+v_diode 2 21 0
+d_diode 21 3 DRN142S
+r0 3 0 1k
+
+.tran 1n 50u
+.control
+
+run
+
+let x = v(21)-v(3)
+
+meas tran v_d_max MAX x
+meas tran v_d_min MIN x
+let v_d_pp = v_d_max - v_d_min
+
+meas tran i_d_max MAX i(v_diode)
+meas tran i_d_min MIN i(v_diode)
+let i_d_pp = i_d_max - i_d_min
+
+print v_d_pp / i_d_pp
+
+.endc
+
+.end
+
+** rn142s
+** r_f(3) = 1.47
+** r_f(2.5) = 1.90
+** r_f(2) = 2.64
+** r_f(1.5) = 4.26
+** r_f(1) = 10.11
+** r_f(0.5) = 541.55
+
+** 1n914
+** r_f(3) = 23
+** r_f(2.5) = 29
+** r_f(2) = 40
+** r_f(1.5) = 63
+** r_f(1) = 170
+** r_f(0.5) = 1172

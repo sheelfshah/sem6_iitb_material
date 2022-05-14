@@ -1,0 +1,37 @@
+19D070052 Sheel sxhottky iv
+
+.include models/Diode_1N914.txt
+.include models/schottky_BAT960.txt
+.include models/schottky_BAT85.txt
+
+v_dc 1 0
+r_1_diode 1 12 100
+r_2_diode 12 0 1k
+** dummy voltage
+v_d_diode 12 13 0
+d_diode 13 14 1N914
+r_3_diode 14 0 100
+
+r_1_bat960 1 22 100
+r_2_bat960 22 0 1k
+** dummy voltage
+v_d_bat960 22 23 0
+x_bat960 23 24 BAT960
+r_3_bat960 24 0 100
+
+r_1_bat85 1 32 100
+r_2_bat85 32 0 1k
+** dummy voltage
+v_d_bat85 32 33 0
+x_bat85 33 34 BAT85
+r_3_bat85 34 0 100
+
+.dc v_dc 0 2 0.01
+
+.control
+
+run
+plot i(v_d_diode) vs v(13)-v(14) i(v_d_bat960) vs v(23)-v(24) i(v_d_bat85) vs v(33)-v(34)
+.endc
+
+.end

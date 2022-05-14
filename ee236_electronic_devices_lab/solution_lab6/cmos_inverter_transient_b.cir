@@ -1,0 +1,22 @@
+19D070052 Sheel Shah I_d vs V_ds
+.include CMOS.txt
+
+
+v_dd 1 0 3.2
+v_in 2 0 PULSE (0 3.2 0 0.02n 0.02n 4n 8n)
+
+m_p 3 2 1 1 cmosp L=0.4u W=60u AS=4.8e-11 PS=121.6u AD=4.8e-11 PD=121.6u
+m_n 3 2 0 0 cmosn L=0.4u W=30u AS=2.4e-11 PS=61.6u AD=2.4e-11 PD=61.6u
+c0 3 0 0.05p
+
+.tran 0.7p 8n 
+.control
+run
+meas tran t_phl TRIG v(2) VAL=1.65 RISE=1 TARG v(3) VAL=1.65 FALL=1
+meas tran t_plh TRIG v(2) VAL=1.65 FALL=1 TARG v(3) VAL=1.65 RISE=1
+print (t_phl+t_plh)/2
+
+** 2: 6.254763e-11, 2.2: 5.326970e-11, 2.4: 4.729788e-11, 2.6: 4.308321e-11, 2.8: 3.993140e-11, 3: 3.747619e-11, 3.2: 3.550326e-11
+
+.endc
+.end

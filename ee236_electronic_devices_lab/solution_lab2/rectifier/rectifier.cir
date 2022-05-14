@@ -1,0 +1,24 @@
+19D070052 Sheel Shah Bridge Rectifier
+
+.include models/schottky_BAT85.txt
+v_in1 1 0 sin(0 6 50 0 0)
+v_in2 2 0 sin(0 -6 50 0 0)
+x1 1 3 BAT85
+x2 2 3 BAT85
+x3 4 2 BAT85
+x4 4 1 BAT85
+
+r_l 3 4 10k
+
+.tran 0.1m 40m
+.control
+set color0 = rgb:f/f/f
+set color1 = rgb:1/1/1
+
+run
+
+plot v(3) - v(4), v(1)-v(2)
+
+.endc
+
+.end

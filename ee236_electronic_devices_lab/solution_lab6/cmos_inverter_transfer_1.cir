@@ -1,0 +1,42 @@
+19D070052 Sheel Shah I_d vs V_ds
+
+.include CMOS.txt
+
+m_p1 31 1 2 2 cmosp  L=0.4u W=60u AS=4.8e-11 PS=121.6u AD=4.8e-11 PD=121.6u
+m_n1 31 1 0 0 cmosn L=0.4u W=30u AS=2.4e-11 PS=61.6u AD=2.4e-11 PD=61.6u
+c1 31 0 0.05p
+
+m_p2 32 1 2 2 cmosp L=0.4u W=60u AS=4.8e-11 PS=121.6u AD=4.8e-11 PD=121.6u
+m_n2 32 1 0 0 cmosn L=0.4u W=60u AS=4.8e-11 PS=121.6u AD=4.8e-11 PD=121.6u
+c2 32 0 0.05p
+
+m_p3 33 1 2 2 cmosp  L=0.4u W=30u AS=2.4e-11 PS=61.6u AD=2.4e-11 PD=61.6u
+m_n3 33 1 0 0 cmosn L=0.4u W=60u AS=4.8e-11 PS=121.6u AD=4.8e-11 PD=121.6u
+c3 33 0 0.05p
+
+v_dd 2 0 3.3
+v_in 1 0
+
+.dc v_in 0 3.3 0.01
+
+* start control
+.measure dc v_t1 find v(1) when v(31)=v(1)
+.print v_t1
+.measure dc v_t2 find v(1) when v(32)=v(1)
+.print v_t2
+.measure dc v_t3 find v(1) when v(33)=v(1)
+.print v_t3
+
+** v_t1 = 1.608554e+00
+** v_t2 = 1.392646e+00
+** v_t3 = 1.203754e+00
+
+.control
+set color0 = rgb:f/f/e
+set color1 = rgb:1/1
+
+run
+plot v(31) vs v(1) v(32) vs v(1) v(33) vs v(1)
+.endc
+.end
+

@@ -1,0 +1,32 @@
+19D070052 Sheel Voltage regulator
+
+.include BZT52C18S.txt
+.include zener.txt
+.include Diode_1N914.txt
+.include ua741.txt
+.include bc547.txt
+
+** nodes: 1 v_s = vcc_opamp = collector_bjt
+** 2 v_z = +_opamp
+** 3 -_opamp = r2
+** 4 out_opamp = base_bjt
+** 5 emitter_bjt = r_load
+v_s 1 0 25
+r_s 1 2 1k
+d0 2 21 1N914
+x_zener 0 21 DI_1N4734A
+x_opamp 2 3 1 0 4 ua741
+q_bjt 1 4 5 bc547a
+r1 5 3 13.7k
+r2 3 0 6.3k
+* r_load 5 0 0
+
+.dc temp 20 80 10
+
+.control
+
+run
+plot v(5)
+.endc
+
+.end

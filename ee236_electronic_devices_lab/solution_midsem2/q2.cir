@@ -1,0 +1,26 @@
+19D070052 Sheel reverse recovery
+
+.include rn142s.txt
+.include Diode_1N914.txt
+
+v_in 1 0 pulse(-5 5 0 0 0 500000n 1000000n)
+d_diode 1 2 1N914
+* d_diode 1 2 DRN142S
+r3 2 0 100
+
+.tran 10000n 5000u
+.control
+
+run
+plot v(2) v(1)
+.endc
+
+.end
+
+** 142s rr: 10k, 100k, 1M, 10M
+** 0.4u, 0.3u, 0.17u, 0.04u
+
+** 1n914: 0.2u, 0.1u, 0.05u, 5n
+
+** 1n914 better at 1k
+** rn142s passes most signal at 10M

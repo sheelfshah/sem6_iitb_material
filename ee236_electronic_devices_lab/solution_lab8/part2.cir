@@ -1,0 +1,20 @@
+Sheel Shah 19D070052
+
+.include bc547.txt
+
+
+q0 3 2 1 bc547a
+v_be 2 0 0
+v_cb 3 2 4
+v_dummy 1 0 0
+
+.dc v_be 0.3 3 0.01
+
+.control
+run
+
+plot log(i(v_dummy) + i(v_cb)) log(-i(v_cb)) vs v(2)
+plot (-i(v_cb))/(i(v_dummy) + i(v_cb)) vs log(-i(v_cb))
+
+.endc
+.end 

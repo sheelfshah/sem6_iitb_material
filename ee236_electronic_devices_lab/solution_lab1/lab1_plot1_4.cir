@@ -1,0 +1,20 @@
+19D070052 Sheel Shah Plot 1 for 1N914
+
+.include models/green_5mm.txt
+v_dc 1 0
+r1 1 2 100
+r2 2 0 1k
+** dummy voltage
+v_d 2 3 0
+d0 3 4 GREEN
+r3 4 0 100
+
+.dc v_dc 0.01 5 0.01
+
+.control
+
+run
+* plot i(v_d) vs v(3)-v(4)
+.endc
+
+.end

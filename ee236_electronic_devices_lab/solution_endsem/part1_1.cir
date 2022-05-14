@@ -1,0 +1,17 @@
+Sheel Shah 19D070052
+
+.include bc547a.txt
+
+q0 0 1 2 bc547a
+r2 3 2 100
+i_source 0 1 0.1m
+v_ce 3 0
+
+.dc v_ce 0 4 0.01
+.control
+run
+
+plot -i(v_ce) vs v(3)
+
+.endc
+.end 

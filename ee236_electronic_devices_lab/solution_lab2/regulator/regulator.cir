@@ -1,0 +1,29 @@
+19D070052 Sheel Voltage regulator using zener
+
+.include ../models/zener.txt
+.include ../models/ua741.txt
+.include ../models/bc547.txt
+
+** nodes: 1 v_s = vcc_opamp = collector_bjt
+** 2 v_z = +_opamp
+** 3 -_opamp = r2
+** 4 out_opamp = base_bjt
+** 5 emitter_bjt = r_load
+v_s 1 0 sin(15 0.1 20 0 0)
+r_s 1 2 52
+x_zener 0 2 DI_1N4734A
+x_opamp 2 3 1 0 4 ua741
+q_bjt 1 4 5 bc547a
+r1 5 3 3.4k
+r2 3 0 5.6k
+* r_load 5 0 0
+
+.tran 0.1ms 1s
+
+.control
+
+run
+plot v(5) v(1)
+.endc
+
+.end

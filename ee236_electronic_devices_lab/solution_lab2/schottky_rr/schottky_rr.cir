@@ -1,0 +1,19 @@
+19D070052 Sheel schottky reverse recovery
+
+.include models/schottky_BAT85.txt
+.include models/1N4007.txt
+
+** 100k pulse
+v_in 1 0 pulse(-5 5 0 0 0 5u 10u)
+* d_diode 1 2 DI_1N4007
+x_diode 1 2 BAT85
+r3 2 0 100
+
+.tran 0.1u 100u
+.control
+
+run
+plot v(2) v(1)
+.endc
+
+.end

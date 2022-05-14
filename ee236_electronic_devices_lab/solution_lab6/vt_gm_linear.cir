@@ -1,0 +1,28 @@
+19D070052 Sheel Shah I_d vs V_ds
+
+.include ALD1105N.txt
+
+** 1 2 3 4: drain gate source body
+m1 1 2 0 4 ALD1105N
+v_dd 4 0 0
+v_id 10 1 0
+v_ds 10 0 0.2
+v_gs 2 0
+
+
+.dc v_gs 0 5 0.1
+
+* start control
+.control
+set color0 = rgb:f/f/e
+set color1 = rgb:1/1/1
+
+run
+
+plot i(v_id) vs v(2)
+
+** v_t by extrapolating linear region: 0.78
+** gm = 9.16118e-05
+.endc
+
+.end

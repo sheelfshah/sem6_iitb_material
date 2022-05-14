@@ -1,0 +1,24 @@
+Sheel Shah 19D070052
+
+.include bc547.txt
+.include 2N3904.txt
+.include BAT54.txt
+
+q1 1 2 0 bc547a
+*x1 2 1 bat54
+*q1 1 2 0 2n3904c
+r_b 2 3 1k
+r_c 1 4 1k
+v_cc 4 0 5
+v_in 3 0 pulse(0 5 0 0 0 0.5u 10u)
+*vin 3 0 pulse(0 5 0 0 0 0.5m 1m)
+*vin 3 0 pulse(0 5 0 0 0 5u 10u)
+*.tran 0.01u 3m 1m
+.tran 0.001u 1.1m 1m
+.control
+run
+plot v(3) v(1)
+meas tran fall trig v(1) val=4.550153e+00 fall=2 targ v(1) val=0.68 fall=2
+meas tran storage trig v(3) val=0.0001 rise=2 targ v(1) val=4.550153e+00 fall=2
+.endc
+.end

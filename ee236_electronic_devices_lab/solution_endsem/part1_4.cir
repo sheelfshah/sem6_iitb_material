@@ -1,0 +1,26 @@
+19D070052 Sheel Shah I_d vs V_ds
+
+.include NMOSFET.txt
+
+** 1 2 3 4: drain gate source body
+m1 1 2 0 4 NMOSFET
+v_dd 4 0 0
+v_id 10 1 0
+v_ds 10 0 3
+v_gs 2 0 3
+
+
+.dc temp 25 55 10
+
+* start control
+.control
+set color0 = rgb:f/f/e
+set color1 = rgb:1/1/1
+
+run
+
+plot i(v_id)
+
+.endc
+
+.end

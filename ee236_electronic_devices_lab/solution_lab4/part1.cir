@@ -1,0 +1,30 @@
+19D070052 Sheel Shah Solar IV
+.include Solar_Cell.txt
+
+v_dc 1 0
+
+r1 1 21 100
+x1 21 31 solar_cell IL_val = 0e-3
+v_dummy1 31 0 0
+.dc v_dc 0.01 2 0.01 temp 35 75 10
+
+* start control
+.control
+set color0 = rgb:f/f/e
+set color1 = rgb:1/1/1
+
+run
+
+plot i(v_dummy1) vs v(21)-v(31), 1m vs v(21)-v(31), 5m vs v(21)-v(31)
+
+* table
+* 35: 0.29, 0.35, 0.43, 2.98, 4.42
+* 45: 0.26, 0.32, 0.40, 2.91, 4.29
+* 55: 0.24, 0.29, 0.38, 2.86, 4.11
+* 65: 0.21, 0.27, 0.35, 2.79, 4.02
+* 75: 0.18, 0.24, 0.33, 2.64, 3.88
+
+* end control
+.endc
+
+.end

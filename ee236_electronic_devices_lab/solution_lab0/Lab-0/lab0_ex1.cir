@@ -1,0 +1,25 @@
+Shunt Clipper AC analysis
+
+.include ngspice_model-files_Lab-0/Diode_1N914.txt
+r1 1 2 1k
+*Specifying a default diode p n
+d1 3 2 1N914
+*Independent DC source of 2V
+vdc 0 3 dc 2
+*Independent DC source whose voltage is to be varied
+vin 1 0 sin(0 5 1k 0 0)
+*DC Analysis on source vin, to vary from -5 to +5V
+.tran 0.01m 6m 0
+.control
+set color0 = rgb:f/f/e
+set color1 = rgb:1/1/1
+run
+plot v(2) v(1)
+plot v(2) vs v(1)
+
+set hcopydevtype=postscript
+hardcopy ee236_electronic_devices_lab/plots/lab0_ex1_4_1.ps v(2) v(1)
+hardcopy ee236_electronic_devices_lab/plots/lab0_ex1_4_2.ps v(2) vs v(1)
+* 1: normal, 2: diode reverse, 3: battery reverse, 4: both reverse
+.endc
+.end

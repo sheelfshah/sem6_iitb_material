@@ -1,0 +1,243 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[hmargin = 0.5 in, vmargin = 0.8in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{esint}
+\usepackage[parfill]{parskip}
+\usepackage{listings}
+\usepackage[newfloat]{minted}
+\usemintedstyle{perldoc}
+\usepackage{floatrow}
+\usepackage{graphicx}
+\graphicspath{ {./Images-Lab10/} }
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage{listings}    
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{{\fontfamily{lmss}\selectfont EE338}}
+\lhead{{\fontfamily{lmss}\selectfont Group 1       }}
+\chead{{\fontfamily{lmss}\selectfont Challenge Problem - Lecture 15B }}
+\title{%
+  EE338 - Digital Signal Processing  \\
+  \large Problem Sheet 10 \\
+    Group 1}
+\author{}
+\date{}
+
+\begin{document}{
+
+\newtheorem{theorem}{Theorem}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{defn}{Definition}[section]
+
+\section{Part 1 - Deterministic Sensing Matrices}
+We have studied compressive sensing, where the goal is to capture majority of the \textit{information} in the signal using very few measurements and obtain accuracte reconstructions. One of the most important aspect of compressive sensing was the design of sensing matrices $\Phi$ and we understood that if the sensing matrices obey the Restricted Isometry Property, and obtained worst case performances on the reconstructed signals. 
+
+Let the signal be $s$ sparse, let the dimension of the signal be $N$ and let the number of measurements be $m$. In particular, we looked at random sensing matrices that satisfy the RIP property with overwhelming probability with the overwhelming property given that:
+
+\begin{equation}
+    m \geq \mathcal{O}(s\log(N/s))
+\end{equation}
+
+In our course, we have look at random sensing matrices, and how they satisfy the RIP property that helps us in obtaining the \textbf{worst} case error bounds. This is analogous to Shannon's coding theory, that also provides a worst case error for a transmission channel and thus the random sensing matrices are associated with certain drawbacks which are described below:
+
+\begin{enumerate}
+    \item \textbf{Time Complexity during Reconstruction}: We have looked at a few algorithms to reconstruct signals from the measurements and some of them include the Basis Pursuit algorithm and the Orthogonal Matching Pursuit algorithm. The time complexity of these signals are given in Table 1. In contrast, we can construct efficient reconstruction algorithms with lower time complexities. 
+    \item \textbf{Storing the Random Sensing Matrix}: This requires significant space, especially if the dimension of signal is large. In contrast, entries of the deterministic sensing matrix can be computed on the fly, and thus no need of storage is required.
+    \item \textbf{Verifying the RIP property}: There is no efficient algorithm for verifying whether the given sensing matrix obeys the RIP property. In the course we looked at an (inefficient) algorithm based on subset ennumeration with $\mathcal{O}(N^s)$ time complexity.
+\end{enumerate}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c}
+        Algorithm & Time Complexity  \\
+        \hline
+         Basis Pursuit & $\mathcal{O}(N^3)$ \\
+         Orthogonal Matching Pursuit & $\mathcal{O}(s^2\log^{\alpha}(N))$ \\
+    \end{tabular}
+    \caption{Caption}
+    \label{tab:my_label}
+\end{table}
+
+An important thing to consider here is analogous to coding theory, instead of the worst-case error we will analyse the typical (expected error) while studying deterministic sensing matrices. 
+
+\subsection{StRIP and UStRIP}
+For dealing with deterministic sensing matrices, we will impose a weaker version of the Restricted Isometry Property, namely the Statistical Restricted Isometry Property.
+
+
+\begin{defn}[($k, e, \delta$ - StRIP matrix)]
+An $m \times N$ sensing matrix $\Phi$ is said to be a $k, \epsilon, \delta $ - StRIP matrix, if for $k$ sparse vectors $\alpha \in \mathbb{R}^N$, the follwing equation:
+\begin{equation}
+    (1 - \epsilon)\lVert \alpha \rVert^2 \leq \lVert \phi\alpha \rVert^2 \leq (1 + \epsilon)\lVert \alpha \rVert^2
+\end{equation}
+holds with probability exceeding $1 - \delta$
+\end{defn}
+
+Note that this definition does not imply unique reconstruction, even with an exceedingly high probability. This is because the number of $s$-sparse vectors $\alpha \in \mathbb{R}^N$ such that there is a different $s$-sparse $\beta \in \mathbb{R}^N$ for which $\Phi\alpha = \Phi\beta$ being small is a much more strict condition than number of $s$-sparse vectors $\beta \in \mathbb{R}^N$ and $\Phi\alpha = \Phi\beta$ be small. Note that the StRIP condition guaranteed the latter condition but not the former, and this is why we define the Unique Statistical Restricted Isometry Property as follows:
+
+\begin{defn}[($k, e, \delta$ - UStRIP matrix)]
+An $m \times N$ sensing matrix $\Phi$ is said to be a $k, \epsilon, \delta $ - UStRIP matrix, if $\Phi$ is a $k, e, \delta$ - StRIP matrix and
+\begin{equation}
+    {\beta \in \mathbb{R}^N, \Phi\alpha = \Phi\beta} = {\alpha}
+\end{equation}
+holds with probability exceeding $1 - \delta$
+\end{defn}
+
+\subsection{StRIP-able Matrices}
+
+We will now look at a few simple design rules, which are sufficient to guarantee that $\Phi$ is a UStRIP matrix, and these properties are satisfied by a large class of matrices.
+
+\begin{defn}
+An $m \times N$ - matrix $\Phi$ is said to be $\eta$ - StRIP-able, where $\eta$ satisfies $0 < \eta < 1$, if the following conditions are satisfied:
+\begin{itemize}
+    \item \textbf{St1}: The rows of $\Phi$ are orthogonal, and all the row sums are 0
+    \item \textbf{St2}: The columns of $\Phi$ form a group under pointwise multiplication as follows:
+    \[ \text{For all } j,j', \text{ there exists a } j'' \text{ such that } \phi_j\phi_{j'} = \phi_{j''}\]
+    \item  \textbf{St2}: For all $j \in {2,....,N}$ 
+    \[    |\sum_x \phi_j(x)|^2 \leq N^{2 - \eta}\]
+\end{itemize}
+\end{defn}
+
+\subsection{Main Result}
+\begin{theorem}
+Suppose the $m \times N$ matrix $\Phi$ is $\eta$ StRIP-able, and suppose $k < 1 + (m - 1)\epsilon$ and $\eta > 1/2$. Then there exists a constant c such that, if $m \geq \left(c\dfrac{k\log(N)}{\epsilon^2}\right)^{1/\eta}$, then $\Phi$ is $(k, \epsilon, \delta) - UStRIP$ with $\delta = 2\exp\left(-\dfrac{[\epsilon - (k-1)/(N - 1)^2]m^{\eta}}{8k}\right)$
+\end{theorem}
+
+\section{Delsarte-
+Goethals Frames}
+A group is a set of elements $\Omega$ with some operation $*$ such that $*$ is associative, invokes an identity element in $\Omega$ and $\forall x, y \in \Omega, x*y \in \Omega$\\
+A Delsarte-Goethals set DG(m, r) is a set of $2^{(r+1)m}$ $m \times m$ binary symmetric matrices with the property that $\forall A, B \in DG(m, r)\ and\ A \neq B, rank(A - B) \geq m - 2r$\\
+A Delsarte-Goethals frame G(m, r) is a $2^m \times 2^{(r+2)m}$ matrix with each element defined as $a_{(P, b), t} = \dfrac{i^{wt(d_P) + 2wt(b)}\cdot i^{tPt^T + 2bt^T}}{\sqrt{m}}$, where:
+$t$ is a binary m-tuple used to index rows of the matrix,\\
+$P$ is a $m \times m$ matrix in DG(m, r),\\
+$b$ is a binary m-tuple,\\
+$(P, b)$ indexes rows,\\
+$wt(\cdot)$ is the Hamming weight of a binary vector (i.e.number of ones),\\
+$d_P$ is the diagonal of $P$\\
+
+\section{Lemma 1}
+The set of unnormalized columns of G(m, r) denoted as $\Psi_{(P, b)}$ forms a group under point-wise multiplication ($*$).\\
+Proof\\
+Sublemma\\
+\begin{align*}
+    For\ t \in  \mathbb{F}_2^m: \Psi_{(P, b)}(t) &= i^{wt(d_P) + 2wt(b)}\cdot i^{tPt^T + 2bt^T}\\
+    \therefore \Psi_{(P, b)}(t)\Psi_{(P', b')}(t) &= i^{wt(d_P) + wt(d_{P'}) + 2wt(b) + 2wt(b')}\cdot\\
+    & \ \ \ \ i^{tPt^T + tP't^T + 2bt^T + 2b't^T}\\
+\end{align*}
+
+Sublemma\\
+Let $\oplus$ denote binary addition, and construct $Q$ such that $P + P' = P \oplus P' + 2Q (mod 4)$. Hence, Q will be binary symmetric too, with $d_Q = dt* d_{P'}$. Moreover, it can be checked that $tQt^T = d_qt^T$, owing to Q being binary symmetric. This implies: 
+\[ tPt^T + tP't^T = t(P+P')t^T = t(P \oplus P')t^T + 2tQt^T\\ =t(P \oplus P')t^T + 2(d_P * d_{P'})t^T\]
+
+Sublemma\\
+$2x + 2y = 2(x \oplus y) mod 4$ and $2wt(x) + 2wt(y) = 2wt(x \oplus y)\ (mod 4)$. This can be checked by trying out all 4 possible binary combinations for a corresponding element of $x$ and $y$. This implies: 
+\[ 2wt(b) + 2wt(b') = 2wt(b \oplus b') \]
+\[ 2wt(b \oplus b') = 2wt(b \oplus b' \oplus 0) = 2wt(b \oplus b' \oplus d_P * d_{P'} \oplus d_P * d_{P'})\\= 2wt(b \oplus b' \oplus d_P * d_{P'}) + 2wt(d_P * d_{P'}) \]
+
+Sublemma\\
+$wt(d_{P \oplus P'}) = wt(d_P) + wt(d_{P'}) + 2wt(d_P * d_{P'})$. This can be checked via taking cases for binary elements of $d_P, d_{P'}$.
+
+
+Combining all sublemmas gives:
+\begin{align*}
+    \therefore \Psi_{(P, b)}(t)\Psi_{(P', b')}(t) &= i^{(wt(d_P) + wt(d_{P'}) + 2wt(d_P * d_{P'})) + 2wt(b \oplus b' \oplus d_P * d_{P'})}\cdot\\
+    &\ \ \ \ i^{t(P \oplus P')t^T + 2(d_P * d_{P'})t^T + 2bt^T + 2b't^T}\\
+    \therefore \Psi_{(P, b)}(t)\Psi_{(P', b')}(t) &= i^{(wt(d_P) + wt(d_{P'}) + 2wt(d_P * d_{P'})) + 2wt(b \oplus b' \oplus d_P * d_{P'})}\cdot\\
+    &\ \ \ \ i^{t(P \oplus P')t^T + 2(d_P * d_{P'} \oplus b \oplus b')t^T}\\
+    \therefore \Psi_{(P, b)}\Psi_{(P', b')} &= \Psi_{(P \oplus P', b \oplus b' \oplus d_P * d_{P'})}
+\end{align*}
+
+\section{Lemma 2}
+G(m, r) is a tight frame with redundancy $\frac{n}{m}$. i.e. $G(m, r)G(m, r)^\dagger = \dfrac{nI_{m \times m}}{m}$\\
+Proof\\
+We prove this showing that the inner product of two rows of G(m, r) is $0$ if the rows are unequal and $\frac{n}{m}$ if they are equal.\\
+Consider rows of index $t, t' \in \mathbb{F}_2^m$
+\begin{align*}
+    \therefore <G(m, r)[:, t], G(m, r)[:, t']> &= \sum_{P, b} \dfrac{\Psi_{P, b}(t)}{\sqrt{m}} \overline{\dfrac{\Psi_{P, b}(t')}{\sqrt{m}}}\\
+    &= \frac{1}{m} \sum_{P, b} i^{tPt^T - t'Pt'^T + 2bt^T - 2bt'^T}\\
+    &= \frac{1}{m} \sum_{P}  i^{tPt^T - t'Pt'^T} \sum_{b} i^{2bt^T - 2bt'^T}\\
+    &= \frac{1}{m} \sum_{P}  i^{tPt^T - t'Pt'^T} \sum_{b} i^{2b(t \oplus t')^T}\\
+    &= \frac{1}{m} \sum_{P}  i^{tPt^T - t'Pt'^T} \sum_{b} (-1)^{b(t \oplus t')^T}\\
+    &= \frac{1}{m} \sum_{P}  i^{tPt^T - t'Pt'^T} \sum_{b' \in \mathbb{F}_2^{m'}} (-1)^{wt(b')}\\
+    &\text{(where $m' = wt(t \oplus t')$)}\\
+    &= \begin{cases}
+    0\ if\ t \oplus t' \neq \textbf{0},\\
+    \frac{n}{m}\ if\ t \oplus t' = \textbf{0}
+    \end{cases}
+\end{align*}
+Notice that $m' = 0 \iff t \oplus t' = \textbf{0}$. Also, the pre-final step is justified because dot product with $(t \oplus t')$ is equivalent to adding those indexes of $b$ where $t \oplus t'$ is $1$, and since $b$ is varied over $\mathbb{F}_2^m$, this dot product is equivalent to the hamming weight of a binary sub-tuple of $b$ that selects the corresponding indices. Finally, it can easily shown that $\forall m' \geq 1, \mathbb{F}_2^{m'}$ has as many odd-hamming-weight vectors as even-hamming-weight ones, implying that the above sum is 0 for $m' \geq 1$.
+
+\textcolor{red}{Given both these lemmas, we can conclude that DG frame is stripable}
+\section{SVMs}
+Data domain $\mathcal{X} = \{(x, y): x \in \mathbb{R}^n, y \in \{-1, 1\}, ||x||_0 \leq k, ||x||_2 \leq R\}$.\\
+Compressed sensing measurement matrix $A \in \mathbb{R}^{m \times n}$.\\
+Measurement domain $\mathcal{M} = \{(Ax, y): (x, y) \in \mathcal{X}\}$.\\
+Let the data be drawn from some unknown distribution $\mathcal{D}$ over $\mathcal{X}$. $S =\ <(x_1, y_1), ..., (x_M, y_M)>$ is a set of $M$ i.i.d samples from $\mathcal{D}$.\\
+$AS =\ <(Ax_1, y_1), ..., (Ax_M, y_M)>$.
+Any linear classifier $w(x)$ corresponds to some $w \in \mathbb{R}^n$ such that $w(x) = sign(w^Tx)$.\\
+The true hinge loss, empirical hinge loss, true regularization loss, empirical regularization loss for a classifier are, respectively, defined as:
+\begin{align*}
+    H_D(w) &= E_{(x, y) \sim \mathcal{D}} [1 - yw^Tx]\\
+    \hat{H}_S(w) &= E_{(x_i, y_i) \sim S} [1 - y_iw^Tx_i]\\
+    L(w) &= H_D(w) + \dfrac{||w||^2}{2C}\\
+    \hat{L}(w) &= \hat{H}_S(w) + \dfrac{||w||^2}{2C}\\
+\end{align*}
+
+The $w$ for soft margin SVM classifier that minimizes $\hat{L}(w)$ can be expressed as:
+\begin{align*}
+    w &= \sum_{i = 1}^M \alpha_i y_i x_i\\
+    where\ &0 \leq \alpha_i \leq \frac{C}{M}\ \forall i\\
+    and\ &||w||^2 \leq C\\
+\end{align*}
+
+We now define the following classifiers:
+\begin{align*}
+    w^* &= arg\min_w L(w) \text{(in data domain)}\\
+    z^* &= arg\min_z L(z) \text{(in measurement domain)}\\
+    \hat{w}_S &= arg\min_w \hat{L}(w) \text{(in data domain)}\\
+    \hat{z}_{AS} &= arg\min_z \hat{L}(z) \text{(in measurement domain)}\\
+\end{align*}
+
+\section{Theorem}
+We prove that the SVM classifier trained on the measurement domain performs, with high probability, almost as well as the best classifier in the data domain. This is done by bounding the difference of losses between (a) the best data domain classifier and the data domain trained SVM, (b) the data domain SVM and its projection onto the measurement domain, and (c) this projection and the SVM trained directly on the measurement domain.\\
+\textcolor{red}{insert image}\\
+
+Theorem:\\
+Let $A$ obey the RIP with $\delta_{2k} = \epsilon$, $AS, \hat{z}_{AS}$ be as defined above, and $w_0$ be the best data domain classifier. Then we have:
+\[ H_D(\hat{z}_{AS}) \leq H_D(w_0) + \mathcal{O}\Bigg(\sqrt{||w_0||^2\bigg(R^2 \epsilon + \frac{log(1/\delta)}{M}}\Bigg) \]
+
+
+\newpage
+
+\begin{theorem}
+For all $\boldsymbol{w}$ with $\lVert \boldsymbol{w} \rVert^2 \leq 2C$, with probability at least 1 - $\delta$ over training set:
+\begin{equation}
+    L_{\mathcal{D}}(\boldsymbol{w}) - L_{\mathcal{D}}(\boldsymbol{w^*})\leq 2[\hat{L_{\mathcal{S}}}(\boldsymbol{w}) - \hat{L_{\mathcal{S}}}(\boldsymbol{w^*})]_+ + O\left(\dfrac{C\log(1/ \delta}{M}\right)
+\end{equation}
+\end{theorem}
+
+\begin{corollary}
+Let $\hat{\boldsymbol{w}}_S$ be the SVM's classifier. Then with probability $1 - \delta$
+\[ L_{\mathcal{D}}(\hat{\boldsymbol{w}}_S) \leq L_{\mathcal{D}}(\boldsymbol{w^*}) + O\left(\dfrac{C\log(1/ \delta}{M}\right)\]
+\end{corollary}
+
+\begin{proof}
+This directly follows from the fact that the SVM's classifier minimises the empirical regularisation loss, thus we have:
+\[ \]
+\end{proof}
+% Notation: $ h \equiv h[n]$ \\
+
+}
+\end{document}
+

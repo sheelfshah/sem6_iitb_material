@@ -1,0 +1,36 @@
+19D070052 Sheel Shah q3
+.include schottky_bat85.txt
+.include TL071.txt
+
+
+v_cc1 100 0 15
+v_cc2 101 0 -15
+
+v_dc 1 0
+r2 1 2 1k
+r3 2 3 10k
+v_sin 3 0 sin(0 0.5 100k 0 0)
+x_op1 0 2 100 101 4 TL071
+* 4 is v_duit
+r_f 2 4 1k
+x_dut 4 5 BAT85
+x_op2 0 5 100 101 6 TL071
+r_fb 5 6 150k
+c_fb 5 6 0.1n
+
+.dc v_dc 0 5 0.01
+
+* start control
+.control
+set color0 = rgb:f/f/e
+set color1 = rgb:1/1/1
+
+run
+
+let c_dut = abs(v(6)/v(4))/9944000000
+plot 1/(c_dut * c_dut / (1p * 1p)) vs v(4)
+
+* end control
+.endc
+
+.end

@@ -1,0 +1,9 @@
+c p sa 1
+c   nvars nclauses
+p cnf 4 5
+c vars: a, b, c, d
+-1 0
+2 0
+-1 2 0
+-3 4 0
+3 -4 0

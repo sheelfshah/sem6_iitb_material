@@ -1,0 +1,67 @@
+19D070052 Sheel Shah I_d vs V_ds
+
+.include CMOS.txt
+
+
+m_p0 30 2 1 1 cmosp L=0.4u W=60u AS=4.8e-11 PS=121.6u AD=4.8e-11 PD=121.6u
+m_n0 30 2 0 0 cmosn L=0.4u W=30u AS=2.4e-11 PS=61.6u AD=2.4e-11 PD=61.6u
+c0 30 0 0.05p
+
+m_p1 31 2 1 1 cmosp L=0.4u W=60u AS=4.8e-11 PS=121.6u AD=4.8e-11 PD=121.6u
+m_n1 31 2 0 0 cmosn L=0.4u W=60u AS=4.8e-11 PS=121.6u AD=4.8e-11 PD=121.6u
+c1 31 0 0.05p
+
+m_p2 32 2 1 1 cmosp L=0.4u W=30u AS=2.4e-11 PS=61.6u AD=2.4e-11 PD=61.6u
+m_n2 32 2 0 0 cmosn L=0.4u W=60u AS=4.8e-11 PS=121.6u AD=4.8e-11 PD=121.6u
+c2 32 0 0.05p
+
+v_dd 1 0 3.3V
+v_in 2 0 PULSE (0 3.3 0 0.02n 0.02n 4n 8n)
+
+
+.tran 0.7p 8n
+
+
+** t_r0                =  4.665267e-11 targ=  4.096014e-09 trig=  4.049361e-09
+** t_f0                =  3.674940e-11 targ=  6.793967e-11 trig=  3.119027e-11
+** t_r1                =  5.675018e-11 targ=  4.110246e-09 trig=  4.053496e-09
+** t_f1                =  2.372796e-11 targ=  4.880620e-11 trig=  2.507824e-11
+** t_r2                =  8.996286e-11 targ=  4.153922e-09 trig=  4.063959e-09
+** t_f2                =  1.992199e-11 targ=  4.229081e-11 trig=  2.236883e-11
+** t_phl0              =  3.523537e-11 targ=  4.523537e-11 trig=  1.000000e-11
+** t_plh0              =  4.407193e-11 targ=  4.064072e-09 trig=  4.020000e-09
+** t_phl1              =  2.368525e-11 targ=  3.368525e-11 trig=  1.000000e-11
+** t_plh1              =  5.213147e-11 targ=  4.072131e-09 trig=  4.020000e-09
+** t_phl2              =  1.933043e-11 targ=  2.933043e-11 trig=  1.000000e-11
+** t_plh2              =  7.511498e-11 targ=  4.095115e-09 trig=  4.020000e-09
+** (t_phl0 + t_plh0)/2 = 3.465475e-11
+** (t_phl1 + t_plh1)/2 = 3.290935e-11
+** (t_phl2 + t_plh2)/2 = 4.222314e-11
+
+.control
+run
+
+meas tran t_r0 TRIG v(30) VAL=0.33 RISE=1 TARG v(30) VAL=2.97 RISE=1
+meas tran t_f0 TRIG v(30) VAL=2.97 FALL=1 TARG v(30) VAL=0.33 FALL=1
+
+meas tran t_r1 TRIG v(31) VAL=0.33 RISE=1 TARG v(31) VAL=2.97 RISE=1
+meas tran t_f1 TRIG v(31) VAL=2.97 FALL=1 TARG v(31) VAL=0.33 FALL=1
+
+meas tran t_r2 TRIG v(32) VAL=0.33 RISE=1 TARG v(32) VAL=2.97 RISE=1
+meas tran t_f2 TRIG v(32) VAL=2.97 FALL=1 TARG v(32) VAL=0.33 FALL=1
+
+meas tran t_phl0 TRIG v(2) VAL=1.65 RISE=1 TARG v(30) VAL=1.65 FALL=1
+meas tran t_plh0 TRIG v(2) VAL=1.65 FALL=1 TARG v(30) VAL=1.65 RISE=1
+
+meas tran t_phl1 TRIG v(2) VAL=1.65 RISE=1 TARG v(31) VAL=1.65 FALL=1
+meas tran t_plh1 TRIG v(2) VAL=1.65 FALL=1 TARG v(31) VAL=1.65 RISE=1
+
+meas tran t_phl2 TRIG v(2) VAL=1.65 RISE=1 TARG v(32) VAL=1.65 FALL=1
+meas tran t_plh2 TRIG v(2) VAL=1.65 FALL=1 TARG v(32) VAL=1.65 RISE=1
+
+print (t_phl0 + t_plh0)/2
+print (t_phl1 + t_plh1)/2
+print (t_phl2 + t_plh2)/2
+
+.endc
+.end
